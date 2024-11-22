@@ -1,0 +1,953 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@font-face {
+    font-family: 'wondra';
+    src: url('../fonts/Wondra.woff') format('woff'), /* Compactado para web */
+         url('../fonts/Wondra.otf') format('opentype'), /* OpenType */
+         url('../fonts/Wondra.ttf') format('truetype'); /* TrueType para compatibilidade */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* PRE CONFIGURAÇÕES STARTS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all 0.2s linear;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Raleway", sans-serif;
+    background-color: #f4f7ff;
+}
+
+/* Estilos para os slider*/
+.slider {
+    margin: 20px 0 0 0;
+}
+.slider .swiper {
+    width: 100%;
+    max-width: 600px;
+    height: 250px;
+}
+.slider .swiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slider .swiper .swiper-button-next,
+.slider .swiper .swiper-button-prev {
+    color: #fff;
+    background: transparent;
+    padding: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+.slider .swiper .swiper-button-next::after, 
+.slider .swiper .swiper-button-prev::after {
+    font-size: 18px; 
+    font-weight: 600;
+}
+.slider .swiper .swiper-pagination-bullet {
+  background: #fff; 
+}
+
+/* Estilos para heading */
+.heading {
+    padding: 2rem;
+    margin-top: 2rem;
+}
+.heading h3 {
+    font-family: "wondra", Sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    color: #0c3756;
+    
+}
+.heading p {
+    font-size: 1.4rem;
+    text-align: center;
+    padding-top: 2rem;
+    line-height: 2rem;
+
+}
+.heading p span,
+.heading p span a {
+    color: #0c3756;
+    font-weight: 600;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+@media screen and (min-width: 768px) {
+    .heading p {
+        font-size: 1.6rem;
+    }
+    .heading h3 {
+        font-size: 4.8rem;
+    }
+}
+
+
+/* Estios para imagem do topo */
+.image-top img{
+    width: 100%;
+    max-height: 75vh;
+}
+/* PRE CONFIGURAÇÕES END */
+
+
+/* HEADER STYLES STARTS */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.7rem 5%;
+    height: 7.5rem;
+    background-color: rgba(58, 114, 142, 0.2); 
+    transition: background-color 0.1s ease-out;
+}
+header .navbar ul {
+    z-index: 10;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+header .navbar li {
+    margin-left: 2.5rem;
+}
+header .navbar ul li a {
+    font-size: 1.57rem;
+    color: #e1e1e1;
+    font-weight: 600;
+    letter-spacing: 0.04rem;
+    font-family: "wondra", Sans-serif;
+}
+header .navbar ul li a.active,
+header .navbar ul li a:hover {   
+    padding: 0.5rem 0;
+}
+header.transparent {
+    background-color: transparen;
+}
+header.scrolled {
+    background-color: #333;
+    color: white;
+}
+
+/* Estilos para o logo */
+header .logo {
+    border-radius: 25px;
+    overflow: hidden;
+    width: 5rem;
+    height: 5rem;
+}
+header .logo img {
+    width: 100%;
+    height: 100%; 
+}
+header .logo span {
+    font-size: 2rem;
+}
+
+/* Estilos para menu hamburguer */
+.fa-bars, .fa-times {
+    padding: .2rem .6rem;
+    border-radius: 5px;
+    font-size: 3.5rem;
+    cursor: pointer;
+    
+    color: #f1f1f1;
+    display: none !important;
+    transition: transform 0.5s ease; 
+}
+.fa-bars.active {
+    transform: rotate(180deg);
+}
+
+/* Media queries para header */
+@media (max-width: 768px) {
+    #menu {
+        display: block !important;
+    }
+    header {
+        z-index: 1000;
+    }
+    header .navbar {
+        position: fixed;
+        top: 7.5rem;
+        width: 100%;
+        left: 0;
+        text-align: left;
+        align-items: flex-start;
+        background-color: #fff;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.5s ease;
+    }
+    header .navbar ul {
+        flex-flow: column;
+        z-index: 10;
+    }
+    header .navbar ul li {
+        text-align: center;
+        width: 100%;
+        margin: .5rem 0;       
+        width: 100%;
+    } 
+    header .navbar ul li a {
+        display: block;
+        padding: .6rem;
+        text-align: left;
+        color: #000000;
+        font-size: 1.4rem;
+        padding-left: 2rem;
+    }
+    header .navbar ul li a.active,
+    header .navbar ul li a:hover {
+        padding: 1.5rem .8rem .8rem 2rem;
+        color: #fff;
+        background-color: #0c3756;
+    }
+    .fa-times {
+        transform: rotate(180deg);
+    }
+    header .navbar.nav-toggle {
+        max-height: 300px;
+    }
+}
+/* HEADER STYLES END */
+
+/* HOME STYLES STARTS */
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 20px;
+}
+.slider-btn.prev {
+    left: 10px;
+}
+.slider-btn.next {
+    right: 10px;
+}
+.slider {
+    overflow: hidden;
+    width: 100%;
+}
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+    width: 100%;
+}
+.slide {
+    flex: 0 0 33.3333%;
+    box-sizing: border-box;
+    padding: 0 1.6rem;
+}
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+@media (min-width: 768px) {
+    .slider-container {
+        padding: 0 1rem;
+        width: 100%;
+    }
+    .slide {
+      flex: 0 0 33.3333%;
+      padding: 1.6rem;
+    }
+}
+@media (max-width: 767px) {
+    .slider-container {
+      width: 100%;
+    }
+    .slide {
+      flex: 0 0 100%;
+    }
+}
+  
+/* Estilos para o about */
+.home-section .home-about .about-container {
+    margin-top: 6rem;  
+}
+
+.home-section .home-about .about-container .image {
+    flex: 1;
+    max-height: 60rem;
+    overflow: hidden;
+}
+.home-section .home-about .about-container .image img {
+    width: 100%;
+    object-fit: cover;
+}
+.home-section .home-about .about-container .text {
+    flex: 1;
+    padding: 1.5rem;
+    background-color: #f4f7ff;
+}
+.home-section .home-about .about-container .text h3 {
+    color: #0c3756;
+    font-size: 3.2rem;
+    text-align: center;
+    font-family: "wondra", Sans-serif;
+    margin: 1.5rem 0;
+}
+.home-section .home-about .about-container .text p {
+    color: #000;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    margin: 3rem 0;
+}
+.home-section .home-about .about-container .text p:nth-child(2) {
+    margin: 0;
+}
+.home-section .home-about .about-container .icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.home-section .home-about .about-container .icons .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+.home-section .home-about .about-container .icons .icon svg {
+    width: 8rem;
+    fill: #0c3756;
+    margin-bottom: 1rem;
+}
+.home-section .home-about .about-container .icons span {
+    font-size: 1.2rem;
+    color: #0c3756;
+    font-family: "wondra", Sans-serif;
+}
+
+@media screen and (min-width: 950px) {
+    .home-section .home-about .about-container {
+        display: flex;
+    }
+    .home-section .home-about .about-container .image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      
+    }
+    .home-section .home-about .about-container .image img {
+        width: 100%;
+        height: 100%;
+    }
+    .home-section .home-about .about-container .text {
+        padding: 0 4rem ;
+    }
+    .home-section .home-about .about-container .text h3 {
+        font-size: 4rem;
+    }
+}
+
+
+
+.home-section .home-accommodations-container {
+
+}
+.home-section .home-accommodations .home-accommodations-container .text {
+    flex: 1;
+    padding: 1.5rem;
+}
+.home-section .home-accommodations .home-accommodations-container .text h3 {
+    color: #0c3756;
+    font-size: 3rem;
+    text-align: center;
+    font-family: "wondra", Sans-serif;
+    margin: 3rem 0 0 0;
+}
+.home-section .home-accommodations .home-accommodations-container .text p {
+    color: #0c3756;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    margin: 3rem 0;
+}
+.home-section .home-accommodations .home-accommodations-container .text .buttom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1.2rem 2rem;
+    background-color: #0c3756;
+}
+.home-section .home-accommodations .home-accommodations-container .text .buttom a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: "Roboto Condensed", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    color: #fff;
+}
+.home-section .home-accommodations .home-accommodations-container .slider {
+    flex: 1;
+}
+@media screen and (min-width: 950px) {
+    .home-section .home-accommodations-container {
+        display: flex;
+        margin-top: 4rem;
+    }
+    .home-section .home-accommodations .home-accommodations-container .text {
+        padding: 0 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .home-section .home-accommodations .home-accommodations-container .text h3 {
+        font-size: 4rem;
+    }
+    .home-section .home-accommodations .home-accommodations-container .slider {
+        padding: 2rem;
+    }
+    .home-section .home-accommodations .home-accommodations-container .swiper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 0;
+        width: 100%;
+        height: 450px;
+    }
+    .home-section .home-accommodations .home-accommodations-container .slider {
+            margin: 0;
+    }
+    
+}
+
+
+/* Estilos básicos para Mobile (telas menores) */
+.home-video-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 10px; /* Espaçamento entre o vídeo e outros elementos */
+    padding: 10px; /* Espaçamento interno */
+    margin: 10rem 0;
+}
+
+.home-video {
+    width: 100%; /* Ocupa toda a largura da tela */
+}
+
+.home-video iframe {
+    width: 100%; /* O vídeo ocupa toda a largura do container */
+    aspect-ratio: 16 / 9; /* Mantém a proporção 16:9 */
+    border: none; /* Remove borda padrão */
+    
+}
+
+/* Oculta a descrição no mobile */
+.home-video-description {
+    display: none; /* Desaparece no mobile */
+}
+
+/* Estilos para Desktop */
+@media screen and (min-width: 950px) {
+    .home-video-container {
+        padding: 3rem;
+        flex-direction: row; /* Vídeo e descrição lado a lado */
+        justify-content: center; /* Centraliza o conteúdo */
+        gap: 2rem; /* Espaçamento entre vídeo e descrição */
+    }
+
+    .home-video {
+        flex: 1;
+        display: flex; /* Torna o vídeo flexível para alinhamento */
+        align-items: center; /* Centraliza verticalmente */
+        gap: 20px; /* Espaçamento interno */
+        max-width: 1200px; /* Define largura máxima para o container */
+    }
+
+    
+
+    .home-video-description {
+        display: flex; /* Torna a descrição visível */
+        flex: 1; /* Ocupa metade do espaço disponível */
+        max-width: 50%; /* Limita largura a 50% */
+        text-align: center; /* Alinha o texto à esquerda */
+        flex-direction: column; /* Mantém itens empilhados dentro da descrição */
+        justify-content: center; /* Centraliza verticalmente */
+    }
+
+    .home-video-description h3 {
+        font-size: 4rem;
+        margin: 0;
+        color: #0c3756;
+        font-family: "wondra", Sans-serif;
+    }
+    .home-video-description p {
+        font-family: "Raleway", sans-serif;
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-top: 2rem;
+        color: #0c3756;
+    }
+}
+
+
+
+
+.home-section .home-reserve {
+    margin-bottom: 6rem;
+}
+.home-section .home-reserve .reserve-container {
+    padding: 0 1.5rem 6rem 1.5rem;
+    background-color: #f4f7ff;
+}
+.home-section .home-reserve .reserve-container h3 {
+    color: #0c3756;
+    font-size: 3rem;
+    text-align: center;
+    font-family: "wondra", Sans-serif;
+    margin-bottom: 1rem;
+}
+.home-section .home-reserve .reserve-container p {
+    color: #0c3756;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 3rem;
+}
+.home-section .home-reserve .reserve-container .buttom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1.2rem 2rem;
+    background-color: #0c3756;
+}
+.home-section .home-reserve .reserve-container .buttom a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: "Roboto Condensed", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    color: #fff;
+}
+
+.home-section .maps {
+    width: 100%;
+    height: 35rem;
+    padding: 10px;
+}
+.home-section .home-reserve .maps iframe {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width: 950px) {
+    .home-section .home-reserve {
+        display: flex;
+        gap: 2rem;
+        padding: 0 3rem;
+    }
+    .home-section .home-reserve .reserve-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .home-section .home-reserve .reserve-container .buttom {
+        width: 50%;
+    }
+    .home-section .home-reserve .maps {
+        flex: 1;
+        width: 100%;
+        height: 35rem;
+    }
+    .home-section .home-reserve .maps iframe {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
+
+
+
+/* Acomodações start */
+.accommodations-container .accommodation {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 2rem;
+}
+.accommodations-container .accommodation .title {
+    font-family: "wondra", Sans-serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    text-align: center;
+    color: #0c3756;
+}
+.accommodations-container .accommodation .description {
+    font-size: 1.6rem;
+    text-align: center;
+    padding-top: 2rem;
+    line-height: 2.4rem;
+    
+}
+
+.accommodations-container .accommodation .items {
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+    padding-top: 2rem;
+    flex-wrap: wrap; 
+    max-height: calc(4 * 1.5em + 4 * 8px);
+}
+.accommodations-container .accommodation .items span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.4rem;
+    width: 150px;
+}
+.accommodations-container .accommodation .items span::before {
+    content: '•';
+    color: #0c3756; 
+    font-size: 1.2em;
+    line-height: 1; 
+}
+
+.accommodations-container .accommodation .buttom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin: 2rem auto;
+    padding: 1.2rem 2rem;
+    background-color: #0c3756;
+}
+.accommodations-container .accommodation .buttom a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: "Roboto Condensed", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+    .accommodations-container .accommodation {
+
+        max-width: 400px;
+    }
+    .accommodations-container .accommodation .description {
+        text-align: left;
+        
+    }
+    .accommodations-container .accommodation .buttom {
+        margin: 0;
+    }
+}
+
+
+
+@media screen and (min-width: 990px) {
+    .accommodations-container .accommodation {
+        flex-direction: row;
+        max-width: none;
+        border: 1px solid red;
+    }
+    .accommodations-container .accommodation .infos {
+        flex: 1;
+    }
+    .accommodations-container .accommodation .room {
+        flex: 1;
+    }
+    
+    .accommodations-container .accommodation .room .swiper {
+        width: 100%;
+        height: 450px;
+    }
+    .accommodations-container .accommodation .buttom {
+        position: absolute;
+        bottom: 0;
+    }
+}
+/* Acomodações end */
+
+
+/* Contato start */
+.contact-container {
+    padding: 2rem 0 6rem 0;
+}
+.contact-container .form .form-infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.contact-container .form .form-infos input,
+.contact-container .form .form-infos select  {
+    background-color: #b7d9e2;
+    width: 90%;
+    height: 4rem;
+    color: #0c3756;
+    border-radius: 0;
+    padding-left: 1.5rem;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+.contact-container .form .form-infos input::placeholder {
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #0c3756;
+}
+.contact-container .form .form-infos select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #0c3756;
+    padding: 0 1.4rem;
+    padding-right: 30px;
+    background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2012%2012%22%3E%3Cpath%20d%3D%22M6%208l4-4H2z%22%20fill%3D%22%230c3756%22/%3E%3C/svg%3E');    
+    background-repeat: no-repeat;
+    background-position: right 10px center; 
+    background-size: 1.5rem;
+    cursor: pointer; 
+}
+.contact-container .form .form-mesage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+}
+.contact-container .form .form-mesage textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #0c3756;
+    background-color: #b7d9e3;
+    width: 90%;
+    border-radius: 0;
+    margin-top: 2rem;
+    padding: 1.2rem 0 0 1.5rem;
+}
+.contact-container .form .form-mesage textarea::placeholder {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #0c3756;
+}
+
+.contact-container .form .buttom {
+    margin-top: 2rem;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    
+}
+.contact-container .form .buttom a {
+    width: 90%;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    background-color: #0c3756;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.footer-section .footer-container {
+    background-color: #0c3756;
+    padding: 3rem 0;
+}
+.footer-section .footer-container .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer-section .footer-container .logo img {
+    width: 12rem;
+    margin-bottom: 1rem;
+} 
+.footer-section .footer-container .logo span {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: "Raleway", sans-serif;
+}
+
+.footer-section .footer-container .links {
+    padding-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer-section .footer-container .links h3 {
+    color: #fff;
+    font-size: 3rem;
+    font-family: "Raleway", sans-serif;
+}
+.footer-section .footer-container .links span a {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: "Raleway", sans-serif;
+}
+.footer-section .footer-container .links .socials {
+    
+    padding-top: 2rem;
+    display: flex;
+    width: 50%;
+    height: auto;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+.footer-section .footer-container .links .socials a {
+    background-color: #f1f1f1;
+    color: #0f290e;
+    border-radius: 50%;
+    font-size: 3rem;
+    padding: 1rem 1.5rem;
+}
+.footer-section .footer-container .contatos {
+    display: flex; 
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.footer-section .footer-container .contatos p {
+    padding: 1rem;
+    color: #fff;
+    font-size: 1.6rem;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+}
+.footer-section .footer-container .contatos span {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #fff;
+    -webkit-text-fill-color: #fff; 
+    -webkit-tap-highlight-color: transparent;
+}
+.footer-section .footer-container .contatos span i {
+    color: #fff;
+    font-size: 2.2rem;
+    margin-right: 1rem;
+}
+@media screen and (min-width: 990px) {
+    .footer-section .footer-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .footer-section .footer-container .logo,
+    .footer-section .footer-container .links,
+    .footer-section .footer-container .contatos {
+        padding: 2rem;
+    }
+    .footer-section .footer-container .logo img {
+        width: 20rem;
+        margin-bottom: 1rem;
+    }
+    .footer-section .footer-container .logo span {
+        font-size: 1.6rem;
+    }
+    .footer-section .footer-container .links .socials {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+
+
+
+
+
+
+
+.regulations-container .regulation {
+    margin-bottom: 2rem;
+    padding: .6rem;
+}
+.regulations-container .regulation h3 {
+    font-family: "Raleway", sans-serif;
+    font-size: 2rem;
+    color: #0c3756;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+}
+.regulations-container .regulation ul {
+    padding-left: 3rem;
+}
+.regulations-container .regulation p,
+.regulations-container .regulation ul li {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.6rem;
+}

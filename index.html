@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATRE - Purunã</title>
+
+    <!-- LINK PARA FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/f9145d5310.js" crossorigin="anonymous"></script>
+
+    <!-- LINK PARA JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- LINK PARA SWIPER -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- LINK PARA CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>   
+    <header class="header" id="header">
+        <div class="logo">
+            <img src="assets/images/logo/logo.jpg" alt="logo">
+        </div>
+
+        <div id="menu" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html" class="active link-menu">Início</a></li>
+                <li><a href="#home-about" class="link-menu">Sobre</a></li>
+                <li><a href="acomodacoes/" class="link-menu">Acomodações</a></li>
+                <li><a href="restaurante/" class="link-menu">Restaurante</a></li>
+                <li><a href="pacotes/" class="link-menu">Pacotes</a></li>
+                <li><a href="regulamentos/" class="link-menu">Regulamentos</a></li>
+                <li><a href="contato/" class="link-menu">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="image-top">
+        <img src="assets/images/imagemTopo/home.jpeg" alt="home">
+    </section>
+
+    <section class="heading">
+        <h3>Viva momentos Inesquecíveis</h3>
+    </section>
+
+    <section class="home-section">
+        <div class="slider-container">
+            <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+            <div class="slider">
+              <div class="slider-track">
+                <div class="slide"><img src="assets/images/sliderHome/slider1.jpg" alt="Image 1"></div>
+                <div class="slide"><img src="assets/images/sliderHome/slider2.jpg" alt="Image 2"></div>
+                <div class="slide"><img src="assets/images/sliderHome/slider3.jpg" alt="Image 3"></div>
+                <div class="slide"><img src="assets/images/sliderHome/slider4.jpg" alt="Image 4"></div>
+                <div class="slide"><img src="assets/images/sliderHome/slider5.jpg" alt="Image 5"></div>
+                <div class="slide"><img src="assets/images/sliderHome/slider6.jpg" alt="Image 6"></div>
+                <div class="slide"><img src="assets/images/sliderHome/slider7.jpg" alt="Image 7"></div>
+              </div>
+            </div>
+            <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        
+        <div class="home-about" id="home-about">
+            <div class="about-container">
+                <div class="image">
+                    <img src="assets/images/imagemTopo/piscina.jpeg" alt="">
+                </div>
+
+                <div class="text">
+                    <h3>Sobre o CATRE</h2>
+                    <p>  
+                        O CATRE Purunã (Centro Adventista de Treinamento e Recreação) é um espaço dedicado ao crescimento 
+                        espiritual, ao treinamento e à recreação, localizado em meio à natureza exuberante da região de 
+                        São Luiz do Purunã, no estado do Paraná. Administrado pela Igreja Adventista do Sétimo Dia, 
+                        o local foi cuidadosamente planejado para proporcionar uma experiência única de conexão com Deus, 
+                        descanso e aprendizado. 
+                    </p>
+                    <p>
+                        Com uma infraestrutura ampla e acolhedora, o CATRE Purunã oferece espaços para eventos, retiros 
+                        espirituais, treinamentos, acampamentos e confraternizações. Sua estrutura conta com auditórios 
+                        bem equipados, alojamentos confortáveis, áreas de lazer e um cenário natural que favorece 
+                        momentos de reflexão e contemplação.
+                    </p>
+                    <p>
+                        O local é especialmente conhecido pela sua atmosfera tranquila, ideal para quem busca um ambiente de 
+                        paz e renovação. Além disso, as atividades promovidas no CATRE, como palestras, workshops e dinâmicas 
+                        em grupo, são voltadas para o fortalecimento espiritual, o desenvolvimento pessoal e a promoção de 
+                        valores cristãos. 
+                    </p>
+                    
+                    <div class="icons">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">g>	<g>		<path d="M438.07,319.573c7.723,5.173,16.875,8.056,26.349,8.056c26.236,0,47.581-21.345,47.581-47.581v-16.032   c0-26.236-21.345-47.581-47.581-47.581c-6.501,0-12.847,1.352-18.716,3.901l0.818-10.628c0.501-6.514-1.757-13-6.197-17.793   c-4.439-4.794-10.732-7.543-17.266-7.543H233.232c-6.534,0-12.827,2.75-17.267,7.543c-4.439,4.793-6.698,11.279-6.197,17.793   l5.203,67.64c-11.238-3.156-23.106-4.799-35.087-4.799h-0.404c-18.688,0-37.11,3.977-53.276,11.502   c-5.458,2.541-9.08,7.633-9.816,13.376c-29.647,5.924-50.21,20.252-60.053,28.518c-6.697,5.624-8.098,15.34-3.258,22.598   l1.882,2.823l-20.296,23.196c-4.57,5.223-7.837,11.436-9.632,18.229H7.5c-2.489,0-4.815,1.234-6.21,3.295   c-1.396,2.061-1.677,4.679-0.753,6.99l9.985,24.963c4.819,12.047,16.317,19.832,29.292,19.832h432.372   c12.975,0,24.473-7.784,29.292-19.832l9.985-24.963c0.924-2.311,0.643-4.93-0.753-6.99c-1.395-2.061-3.722-3.295-6.21-3.295   h-78.925c4.79-6.001,7.894-13.414,8.519-21.53L438.07,319.573z M444.305,238.518c5.767-4.582,12.81-7.082,20.114-7.082   c17.965,0,32.581,14.616,32.581,32.581v16.032c0,17.965-14.616,32.581-32.581,32.581c-9.604,0-18.733-4.347-24.913-11.728   L444.305,238.518z M65.982,337.431c8.54-7.172,26.197-19.499,51.685-24.957l0.302,2.514c0.493,4.113,4.229,7.043,8.34,6.553   c4.113-0.494,7.046-4.228,6.553-8.34l-1.601-13.337c-0.11-0.918,0.401-1.808,1.273-2.214c14.197-6.608,30.43-10.101,46.946-10.101   h0.404c16.516,0,32.749,3.493,46.945,10.101c0.872,0.406,1.384,1.295,1.273,2.216l-11.149,92.926h-74.541l-5.588-46.575   c-0.494-4.112-4.224-7.045-8.34-6.553c-4.112,0.494-7.046,4.228-6.553,8.34l5.374,44.788h-26.7L65.56,340.223   C64.956,339.317,65.134,338.143,65.982,337.431z M45.953,384.438l17.627-20.145l18.998,28.497H40.832   C42.083,389.728,43.793,386.906,45.953,384.438z M431.567,208.559L419.138,370.11c-0.979,12.718-11.737,22.681-24.492,22.681   h-2.37c-4.142,0-7.5,3.358-7.5,7.5c0,4.142,3.358,7.5,7.5,7.5h101.146l-5.871,14.678c-2.528,6.319-8.559,10.403-15.365,10.403   H39.814c-6.806,0-12.837-4.083-15.365-10.403l-5.871-14.678h341.631c4.142,0,7.5-3.358,7.5-7.5c0-4.142-3.358-7.5-7.5-7.5h-25.875   c-1.794-6.793-5.062-13.007-9.632-18.23l-20.296-23.195l1.882-2.823c4.839-7.259,3.438-16.974-3.258-22.599   c-9.842-8.265-30.406-22.593-60.053-28.517c-0.736-5.743-4.358-10.835-9.816-13.376c-0.9-0.419-1.809-0.823-2.722-1.219   l-5.713-74.273c-0.185-2.396,0.613-4.688,2.247-6.452c1.634-1.764,3.857-2.735,6.261-2.735H423.06c2.404,0,4.627,0.971,6.26,2.735   C430.953,203.871,431.751,206.162,431.567,208.559z M293.807,340.222l-35.046,52.569h-26.7l9.636-80.317   c25.489,5.458,43.146,17.785,51.686,24.956C294.232,338.143,294.41,339.317,293.807,340.222z M295.787,364.294l17.626,20.144   c2.159,2.468,3.869,5.29,5.121,8.353h-41.745L295.787,364.294z"></path>	</g></g><g>	<g>		<path d="M333.214,110.166c-3.873-3.552-5.585-5.287-5.585-9.177c0-3.875,1.711-5.605,5.581-9.149   c4.411-4.039,10.451-9.57,10.451-20.212c0-4.142-3.358-7.5-7.5-7.5c-4.142,0-7.5,3.358-7.5,7.5c0,3.875-1.711,5.605-5.581,9.149   c-4.411,4.039-10.451,9.57-10.451,20.211c0,10.65,6.038,16.188,10.447,20.231c3.873,3.552,5.585,5.287,5.585,9.177   c0,3.893-1.712,5.627-5.585,9.179c-4.409,4.043-10.447,9.582-10.447,20.231c0,4.142,3.358,7.5,7.5,7.5c4.142,0,7.5-3.358,7.5-7.5   c0-3.89,1.712-5.625,5.585-9.177c4.409-4.043,10.447-9.582,10.447-20.231C343.661,119.748,337.623,114.21,333.214,110.166z"></path>	</g></g><g>	<g>		<path d="M303.989,125.821c-5.59-7.263-8.424-15.617-8.424-24.829c0-3.926,0.512-7.722,1.522-11.283   c1.13-3.985-1.184-8.132-5.168-9.262c-3.983-1.128-8.132,1.184-9.262,5.168c-1.388,4.893-2.092,10.067-2.092,15.377   c0,12.599,3.882,24.03,11.538,33.977c1.476,1.921,3.699,2.927,5.948,2.927c1.597,0,3.206-0.508,4.569-1.557   C305.903,133.813,306.516,129.104,303.989,125.821z"></path>	</g></g><g>	<g>		<path d="M367.387,101.006c3.897-6.218,6.451-12.978,7.612-20.163c0.661-4.089-2.119-7.939-6.208-8.6   c-4.089-0.665-7.94,2.118-8.6,6.208c-1.051,6.502-3.702,12.553-7.879,17.984c-2.073,2.695-2.074,6.449,0,9.145   c5.583,7.26,8.414,15.609,8.414,24.815c0,6.474-1.394,12.543-4.144,18.039c-1.853,3.704-0.353,8.21,3.352,10.063   c1.077,0.539,2.222,0.794,3.35,0.794c2.75,0,5.399-1.519,6.713-4.146c3.801-7.598,5.729-15.925,5.729-24.75   C375.726,119.691,372.924,109.831,367.387,101.006z"></path>	</g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>				
+                            <span>Café da manhã</span>
+                         </div>
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 1000 1000" data-name="Layer 1"><path d="m143.65 448.34a59.65 59.65 0 0 1 -42.18-101.83c219.75-219.75 577.31-219.75 797.06 0a59.65 59.65 0 0 1 -84.36 84.36c-83.78-83.78-195.35-129.87-314.17-129.87s-230.39 46.09-314.17 129.87a59.22 59.22 0 0 1 -42.18 17.47zm356.35-234.66c-136.15 0-272.25 51.81-375.9 155.46a27.65 27.65 0 0 0 39.11 39.1 474.83 474.83 0 0 1 336.79-139.24 474.83 474.83 0 0 1 336.79 139.24 27.65 27.65 0 1 0 39.11-39.1c-103.62-103.63-239.78-155.46-375.9-155.46z"></path><path d="m740.78 563.91a59.26 59.26 0 0 1 -42.19-17.47 281.18 281.18 0 0 0 -397.18 0 59.66 59.66 0 0 1 -84.41-84.36c156-156 409.9-156 565.92 0a59.65 59.65 0 0 1 -42.18 101.83zm-240.78-131.59c83.66 0 162.22 32.49 221.22 91.5a27.65 27.65 0 1 0 39.11-39.11c-143.55-143.55-377.11-143.55-520.66 0a27.65 27.65 0 1 0 39.11 39.1c59-58.99 137.57-91.49 221.22-91.49z"></path><path d="m374.8 679.49a59.65 59.65 0 0 1 -42.18-101.84 236.91 236.91 0 0 1 334.76 0 59.65 59.65 0 1 1 -84.38 84.35 117.62 117.62 0 0 0 -166 0 59.27 59.27 0 0 1 -42.2 17.49zm125.2-139.09a203.36 203.36 0 0 0 -144.76 59.88 27.65 27.65 0 1 0 39.11 39.11 149.61 149.61 0 0 1 211.3 0 27.65 27.65 0 1 0 39.11-39.11 203.36 203.36 0 0 0 -144.76-59.88z"></path><path d="m500 818.31a73.27 73.27 0 1 1 51.81-21.46 72.79 72.79 0 0 1 -51.81 21.46zm0-114.55a41.26 41.26 0 1 0 29.19 12.09 41 41 0 0 0 -29.19-12.09z"></path></svg>
+                            <span>Wi-fi</span>
+                        </div>
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g id="outlline"><path d="m336.834 444.3h78.332a24.863 24.863 0 0 0 24.834-24.831v-98.222l4.422 2.211a8 8 0 0 0 7.156-14.311l-11.578-5.788v-41.059a42.047 42.047 0 0 0 -42-42h-44a42.047 42.047 0 0 0 -42 42v41.056l-11.578 5.788a8 8 0 1 0 7.156 14.311l4.422-2.208v98.222a24.863 24.863 0 0 0 24.834 24.831zm5.294-16a46.692 46.692 0 0 0 16.079-24h35.586a46.7 46.7 0 0 0 16.078 24zm16.118-112-4-16h43.508l-4 16zm33.754 16v56h-32v-56zm16-94a26.038 26.038 0 0 1 16 24v1.056l-8.188-4.094a14.058 14.058 0 0 1 -7.812-12.638zm-80 24a26.038 26.038 0 0 1 16-24v8.319a14.058 14.058 0 0 1 -7.812 12.641l-8.188 4.099zm0 18.944 15.343-7.672a29.966 29.966 0 0 0 16.657-26.948v-10.324h32v10.321a29.966 29.966 0 0 0 16.657 26.951l15.343 7.675v137.441l-2.265-1.51a30.783 30.783 0 0 1 -13.735-25.664v-66.226l7.761-31.045a8 8 0 0 0 -7.761-9.943h-64a8 8 0 0 0 -7.761 9.94l7.761 31.048v66.226a30.783 30.783 0 0 1 -13.735 25.664l-2.265 1.51z"></path><path d="m285.659 179.687a8 8 0 0 0 15.434-4.217l-3.411-12.487 26.118-23.383a48 48 0 0 0 3.737-67.781l-21.351-23.84a48.053 48.053 0 0 0 -67.779-3.737l-26.116 23.387-12.035-4.764a8 8 0 0 0 -5.888 14.877l4.6 1.82-68.7 61.522a30.869 30.869 0 0 0 -2.4 43.541l44.25 49.413a30.632 30.632 0 0 0 21.273 10.218c.58.031 1.159.048 1.736.048a30.607 30.607 0 0 0 20.531-7.866l68.7-61.521zm35.7-80.864 1.738-1.556a32.176 32.176 0 0 1 .628 8.334 31.759 31.759 0 0 1 -7.043 18.328l-1.312-4.8a20.021 20.021 0 0 1 5.991-20.306zm-49.169-50.774a32.16 32.16 0 0 1 8.214 1.54l-1.738 1.557a20.027 20.027 0 0 1 -20.838 3.721l-4.63-1.832a31.762 31.762 0 0 1 18.992-4.986zm-87.39 176.084c-.258-.25-.518-.5-.761-.769l-44.25-49.413c-.244-.272-.461-.558-.681-.843a52.532 52.532 0 0 0 28.378-4.239c.1.121.193.25.3.368l24.014 26.819c.105.117.221.216.329.329a52.69 52.69 0 0 0 -7.329 27.748zm-3.761-64.079 47.676-42.7 21.343 23.846-47.677 42.7zm57.608-55.519 4.412-7.136 28.169 31.456-7.74 3.371c-.059-.07-.11-.144-.171-.212l-24.017-26.814c-.213-.238-.437-.449-.658-.665zm-33.666 119.984a14.763 14.763 0 0 1 -3.981 2.541 36.754 36.754 0 0 1 12.052-31.248l49.166-44.029c.843-.754 25.543-12.679 25.543-12.679a8 8 0 0 0 2.766-12.672l-42.692-47.677a8 8 0 0 0 -12.764 1.13s-15.178 23.892-15.544 24.219l-49.159 44.023-.009.007a36.756 36.756 0 0 1 -32.384 8.544 14.755 14.755 0 0 1 2.963-3.678l78.37-70.18.026-.024 20.1-18 12.5 4.947a35.944 35.944 0 0 0 37.4-6.68l4.926-4.411 21.348 23.839-4.92 4.409a35.936 35.936 0 0 0 -10.751 36.44l3.543 12.97z"></path><path d="m140.8 231.2a7.99 7.99 0 0 0 -8.728 7.2 48 48 0 0 0 43.194 52.368q2.351.225 4.684.224a47.509 47.509 0 0 0 24.905-7.027 8 8 0 1 0 -8.342-13.652 32 32 0 0 1 -48.513-30.388 8 8 0 0 0 -7.2-8.725z"></path><path d="m117.218 229.814a8 8 0 0 0 -15.662-3.269 81.364 81.364 0 0 0 -1.334 8.792 80.09 80.09 0 0 0 71.987 87.279q3.873.372 7.729.371a79.5 79.5 0 0 0 37.808-9.544 8 8 0 1 0 -7.591-14.084 64 64 0 0 1 -94.007-62.492 65.26 65.26 0 0 1 1.07-7.053z"></path><path d="m88.016 214.962a8.087 8.087 0 0 0 .412-1.862 8 8 0 0 0 -15.611-3.152 112.091 112.091 0 0 0 96.335 144.523q5.408.517 10.8.517a111.434 111.434 0 0 0 51.434-12.55 8 8 0 0 0 -7.374-14.2 96.057 96.057 0 0 1 -135.996-113.276z"></path><path d="m488 236.3a8 8 0 0 0 -8 8v216h-216v-216a8 8 0 0 0 -16 0v216h-216v-216a8 8 0 0 0 -16 0v224a8 8 0 0 0 8 8h464a8 8 0 0 0 8-8v-224a8 8 0 0 0 -8-8z"></path></g></svg>
+                            <span>Estacionamento</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-accommodations">
+            <div class="home-accommodations-container">
+                <div class="text">
+                    <h3>Acomodações</h3>
+
+                    <p>
+                        O CATRE Purunã possui vários apartamentos distribuídos em cinco categorias: Bloco A, Bloco B, Bloco C, 
+                        Bloco D e Bloco E. Cada bloco foi projetado para atender diferentes perfis de hóspedes, oferecendo 
+                        opções variadas que combinam conforto e funcionalidade. 
+                    </p>
+                    <p>
+                        Cada unidade dispõe de camas confortáveis, banheiros privativos e chuveiros com água quente, 
+                        proporcionando uma experiência agradável e prática. A estrutura também conta com ventilação 
+                        natural e iluminação aconchegante, garantindo um ambiente acolhedor para todos os visitantes. 
+                    </p>
+
+                    <div class="buttom">
+                        <a href="acomodacoes/">Ver mais detalhes</a>
+                    </div>
+                </div>
+
+                <div class="slider">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="../assets/images/blocoB/image2.jpeg" alt="Bloco A Foto 1"></div>
+                            <div class="swiper-slide"><img src="./assets/images/blocoDeE/image3.jpeg" alt="Bloco A Foto 2"></div>                            
+                            <div class="swiper-slide"><img src="../assets/images/blocoC/image2.jpeg" alt="Bloco A Foto 2"></div>
+                            <div class="swiper-slide"><img src="./assets/images/blocoDeE/image5.jpeg" alt="Bloco A Foto 2"></div>                        </div>
+                        <!-- Botões laterais -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <!-- Indicadores (paginação) -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+
+                
+        
+            </div>
+        </div>
+
+
+        <div class="home-video-container">
+            <div class="home-video">
+                <iframe  
+                    src="https://www.youtube.com/embed/EoCymc86mCI?si=udaXA1X7XYCwxgBH" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="home-video-description">
+                <h3>Conheça o CATRE Purunã</h3>
+                <p>Referência como centro de treinamento na cidade de São Luiz do Purunã e região.</p>
+            </div>
+        </div>
+
+        <div class="home-reserve">
+            <div class="reserve-container">
+                <h3>Faça sua reserva</h3>
+                <p>
+                    Seja para desfrutar de momentos de descanso ou promover um evento corporativo único e inesquecível, 
+                    o CATRE Purunã oferece o ambiente ideal, combinando conforto, estrutura de qualidade 
+                    e a beleza de um cenário encantador.
+                </p>
+                <div class="buttom">
+                    <a href="https://wa.me/5541997920156">Fale com a gente!</a>
+                </div>
+            </div>
+            <div class="maps">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.645827933402!2d-49.70919654445801!3d-25.450101787015484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dd40693963baa3%3A0x47fef409f033af4e!2zQ0FUUkUgLSBTw6NvIEx1w61zIGRvIFB1cnVuw6M!5e0!3m2!1spt-BR!2sbr!4v1732246035559!5m2!1spt-BR!2sbr" 
+                    
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+
+    </section>
+    
+    <section class="footer-section">
+        <div class="footer-container">
+            <div class="logo">
+                <img src="assets/images/logo/logo.jpg" alt="logo">
+                <span>&copy; Todos os direitos reservados, 2024.</span>
+            </div>
+            <div class="links">
+                <h3>Outros Links</h3>
+                <span><a href="index.html">Início</a></span>
+                <span><a href="http://">Regulamentos</a></span>
+                <span><a href="http://">Política de Privacidade</a></span>
+                <div class="socials">
+                    <a href="https://wa.me/5541997920156"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/catrepuruna"><i class="fa-brands fa-instagram"></i></a>    
+                </div>
+            </div>
+            <div class="contatos">
+                <p>
+                    R. Ver. João Bertoja Filho, 983 - São Luiz do Purunã, Balsa Nova - PR,
+                    83650-000, Brasil
+                </p>
+                <span class="phone">
+                    <i class="fa-solid fa-phone"></i>
+                    (41) 99792-0156
+                </span>
+                <span class="email">
+                    <i class="fa-regular fa-envelope"></i>
+                    catre.puruna@adventistas.org
+                </span>
+            </div>
+        </div>
+    </section>
+
+    
+   
+
+    
+
+
+
+    <script src="assets/js/script.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</body>
+</html>
