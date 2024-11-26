@@ -24,6 +24,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.getElementById("header");
+
+  // Cor base e opacidade inicial
+  const baseColor = "134, 182, 198"; // RGB da cor
+  const initialOpacity = 0.8; // Opacidade inicial
+  const maxScroll = 200; // Altura máxima para calcular opacidade
+
+  // Atualiza a opacidade do cabeçalho
+  const updateHeaderOpacity = () => {
+    const scrollTop = window.scrollY;
+    const opacity = Math.min(scrollTop / maxScroll + initialOpacity, 1);
+
+    // Aplica a cor com opacidade calculada
+    header.style.backgroundColor = `rgba(${baseColor}, ${opacity})`;
+  };
+
+  // Aplica a cor inicial ao carregar a página
+  header.style.backgroundColor = `rgba(${baseColor}, ${initialOpacity})`;
+
+  // Atualiza a opacidade ao rolar
+  document.addEventListener("scroll", updateHeaderOpacity);
+});
+
+
+
+
+
 
 $(document).ready(function () {
 
@@ -31,12 +59,39 @@ $(document).ready(function () {
   $('#menu').click(function () {
       $(this).toggleClass('fa-times');
       $('.navbar').toggleClass('nav-toggle');
+      
+      // Alterna a visibilidade e a opacidade da sobreposição
+      if ($('.navbar').hasClass('nav-toggle')) {
+          $('#overlay').css({
+              'opacity': '1',      // Tornar o overlay visível
+              'visibility': 'visible' // Tornar o overlay acessível
+          });
+      } else {
+          $('#overlay').css({
+              'opacity': '0',      // Tornar o overlay invisível
+              'visibility': 'hidden' // Tornar o overlay inacessível
+          });
+      }
   });
 
   // Fechar o menu durante o scroll ou no carregamento da página
   $(window).on('scroll load', function () {
       $('#menu').removeClass('fa-times');
       $('.navbar').removeClass('nav-toggle');
+      $('#overlay').css({
+          'opacity': '0', 
+          'visibility': 'hidden' // Esconde a sobreposição
+      });
+  });
+
+  // Fechar o menu clicando na sobreposição
+  $('#overlay').click(function () {
+      $('#menu').removeClass('fa-times');
+      $('.navbar').removeClass('nav-toggle');
+      $('#overlay').css({
+          'opacity': '0', 
+          'visibility': 'hidden' // Esconde a sobreposição
+      });
   });
 
   // Rolagem suave para links com # (âncoras)
@@ -46,6 +101,10 @@ $(document).ready(function () {
       // Fecha o menu (para dispositivos móveis)
       $('#menu').removeClass('fa-times');
       $('.navbar').removeClass('nav-toggle');
+      $('#overlay').css({
+          'opacity': '0', 
+          'visibility': 'hidden' // Esconde a sobreposição
+      });
 
       // Rolagem suave até o destino
       const target = $($(this).attr('href'));
@@ -75,25 +134,13 @@ $(document).ready(function () {
           }
       });
   });
-
-
-  
-
 });
 
 
 
 
-document.addEventListener("scroll", () => {
-  const header = document.getElementById("header");
-  const scrollTop = window.scrollY;
-  const maxScroll = 200;
 
-  const minOpacity = 0.15;
-  const opacity = Math.min(scrollTop / maxScroll + minOpacity, 1); 
-  
-  header.style.backgroundColor = `rgba(134, 182, 198, ${opacity})`;
-});
+
 
 
 

@@ -86,19 +86,24 @@ body {
     color: #0c3756;
     font-weight: 600;
     text-decoration: none;
-    -webkit-tap-highlight-color: transparent;
+    -kit-tap-highlight-color: transparent;
 }
 @media screen and (min-width: 768px) {
-    .heading p {
-        font-size: 1.6rem;
-    }
     .heading h3 {
         font-size: 4.8rem;
+    }
+    .heading p {
+        font-size: 2rem;
+        line-height: 3.3rem;
+        width: 70%;
+        margin: 0 auto;
+
     }
 }
 
 
 /* Estios para imagem do topo */
+
 .image-top img{
     width: 100%;
     max-height: 75vh;
@@ -117,9 +122,10 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 1.7rem 5%;
-    height: 7.5rem;
-    background-color: rgba(58, 114, 142, 0.2); 
-    transition: background-color 0.1s ease-out;
+    height: 9rem;
+    background-color: rgba(33, 110, 173, 0.8); 
+    transition: background-color a.1s ease-out;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 header .navbar ul {
     z-index: 10;
@@ -132,8 +138,8 @@ header .navbar li {
     margin-left: 2.5rem;
 }
 header .navbar ul li a {
-    font-size: 1.57rem;
-    color: #e1e1e1;
+    font-size: 1.6rem;
+    color: #e9e9e9;
     font-weight: 600;
     letter-spacing: 0.04rem;
     font-family: "wondra", Sans-serif;
@@ -141,18 +147,30 @@ header .navbar ul li a {
 header .navbar ul li a.active,
 header .navbar ul li a:hover {   
     padding: 0.5rem 0;
+    color: #0c3756;
 }
-header.transparent {
-    background-color: transparen;
+
+
+header .buttom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20rem;
+    padding: 1.2rem 2rem;
+    background-color: #0c3756;
 }
-header.scrolled {
-    background-color: #333;
-    color: white;
+header .buttom a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: "wondra", Sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    color: #fff;
 }
 
 /* Estilos para o logo */
 header .logo {
-    border-radius: 25px;
+    border-radius: 50%;
     overflow: hidden;
     width: 5rem;
     height: 5rem;
@@ -171,34 +189,50 @@ header .logo span {
     border-radius: 5px;
     font-size: 3.5rem;
     cursor: pointer;
-    
-    color: #f1f1f1;
+    z-index: 100;
+    color: #0c3756;
     display: none !important;
-    transition: transform 0.5s ease; 
+    transition: transform 0.8s ease; 
 }
 .fa-bars.active {
     transform: rotate(180deg);
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor preta com opacidade */
+    opacity: 0; /* Inicialmente invisível */
+    visibility: hidden; /* Inicialmente invisível e não ocupa espaço */
+    transition: opacity 1s ease, visibility 1s ease; /* Transição suave para opacity e visibility */
+    z-index: 98; /* Fica abaixo do menu */
+}
+
 /* Media queries para header */
-@media (max-width: 768px) {
+@media (max-width: 1240px) {
     #menu {
         display: block !important;
     }
     header {
-        z-index: 1000;
+        z-index: 100;
+        height: 7rem;
     }
     header .navbar {
         position: fixed;
-        top: 7.5rem;
-        width: 100%;
-        left: 0;
+        top: 0;
+        right: -100rem;
+        width: 70%;
+        height: 100%;
+        padding-top: 8rem;
         text-align: left;
         align-items: flex-start;
-        background-color: #fff;
+        background-color: #ccc;
         overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.5s ease;
+        z-index: 99;
+        transition: right .6s ease;
     }
     header .navbar ul {
         flex-flow: column;
@@ -213,14 +247,15 @@ header .logo span {
     header .navbar ul li a {
         display: block;
         padding: .6rem;
+        padding-left: 2rem;
         text-align: left;
         color: #000000;
-        font-size: 1.4rem;
-        padding-left: 2rem;
+        font-size: 1.6rem;
+        font-family: "Raleway", sans-serif;
     }
     header .navbar ul li a.active,
     header .navbar ul li a:hover {
-        padding: 1.5rem .8rem .8rem 2rem;
+        padding: 1rem .8rem 1rem 2rem;
         color: #fff;
         background-color: #0c3756;
     }
@@ -228,7 +263,10 @@ header .logo span {
         transform: rotate(180deg);
     }
     header .navbar.nav-toggle {
-        max-height: 300px;
+        right: 0;
+    }
+    header .buttom {
+        display: none;
     }
 }
 /* HEADER STYLES END */
@@ -299,31 +337,32 @@ header .logo span {
 /* Estilos para o about */
 .home-section .home-about .about-container {
     margin-top: 6rem;  
+    background-color: #0c3756;
 }
 
 .home-section .home-about .about-container .image {
     flex: 1;
-    max-height: 60rem;
     overflow: hidden;
 }
 .home-section .home-about .about-container .image img {
     width: 100%;
+    height: auto;
     object-fit: cover;
 }
 .home-section .home-about .about-container .text {
     flex: 1;
     padding: 1.5rem;
-    background-color: #f4f7ff;
+    background-color: #0c3756;
 }
 .home-section .home-about .about-container .text h3 {
-    color: #0c3756;
+    color: #216ead;
     font-size: 3.2rem;
     text-align: center;
     font-family: "wondra", Sans-serif;
     margin: 1.5rem 0;
 }
 .home-section .home-about .about-container .text p {
-    color: #000;
+    color: #fff;
     font-size: 1.6rem;
     font-weight: 500;
     text-align: center;
@@ -347,12 +386,12 @@ header .logo span {
 }
 .home-section .home-about .about-container .icons .icon svg {
     width: 8rem;
-    fill: #0c3756;
+    fill: #216ead;
     margin-bottom: 1rem;
 }
 .home-section .home-about .about-container .icons span {
     font-size: 1.2rem;
-    color: #0c3756;
+    color: #216ead;
     font-family: "wondra", Sans-serif;
 }
 
@@ -364,24 +403,43 @@ header .logo span {
         display: flex;
         align-items: center;
         justify-content: center;
-      
+        min-height: 70rem;
     }
     .home-section .home-about .about-container .image img {
         width: 100%;
         height: 100%;
     }
     .home-section .home-about .about-container .text {
-        padding: 0 4rem ;
+        padding: 2rem 4rem ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
     }
     .home-section .home-about .about-container .text h3 {
-        font-size: 4rem;
+        font-size: 5rem;
+        text-align: start;
+    }
+    .home-section .home-about .about-container .text p {
+        text-align: justify;
+        font-size: 2rem;
+        line-height: 3.3rem;
+    }
+    .home-section .home-about .about-container .icons {
+        justify-content: space-evenly;
+    }
+    .home-section .home-about .about-container .icons .icon svg {
+        width: 10rem;
+    }
+    .home-section .home-about .about-container .icons span {
+        font-size: 2rem;
     }
 }
 
 
 
 .home-section .home-accommodations-container {
-
+    background-color: #4a899c;
 }
 .home-section .home-accommodations .home-accommodations-container .text {
     flex: 1;
@@ -425,29 +483,45 @@ header .logo span {
 @media screen and (min-width: 950px) {
     .home-section .home-accommodations-container {
         display: flex;
-        margin-top: 4rem;
     }
     .home-section .home-accommodations .home-accommodations-container .text {
         padding: 0 4rem;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: start;
         justify-content: center;
+        
     }
     .home-section .home-accommodations .home-accommodations-container .text h3 {
-        font-size: 4rem;
+        font-size: 5rem;
+        text-align: start;
+    }
+    .home-section .home-accommodations .home-accommodations-container .text p {
+        font-size: 2rem;
+        text-align: justify;
+        font-weight: 600;
+        line-height: 3.3rem;
+        margin: 2rem 0;
+    }
+    .home-section .home-accommodations .home-accommodations-container .text .buttom {
+        margin: 0;
+        margin-top: 4rem;
+        max-width: 50rem;
+    }
+    .home-section .home-accommodations .home-accommodations-container .text .buttom a {
+        font-size: 2rem;
     }
     .home-section .home-accommodations .home-accommodations-container .slider {
-        padding: 2rem;
+        padding: 4rem;
     }
     .home-section .home-accommodations .home-accommodations-container .swiper {
         display: flex;
         align-items: center;
         justify-content: center;
-
         margin: 0;
         width: 100%;
-        height: 450px;
+        max-width: none;
+        height: 60rem;
     }
     .home-section .home-accommodations .home-accommodations-container .slider {
             margin: 0;
@@ -474,7 +548,7 @@ header .logo span {
     width: 100%; /* O vídeo ocupa toda a largura do container */
     aspect-ratio: 16 / 9; /* Mantém a proporção 16:9 */
     border: none; /* Remove borda padrão */
-    
+    border-radius: 10px;
 }
 
 /* Oculta a descrição no mobile */
@@ -495,10 +569,14 @@ header .logo span {
         flex: 1;
         display: flex; /* Torna o vídeo flexível para alinhamento */
         align-items: center; /* Centraliza verticalmente */
+        justify-content: center;
         gap: 20px; /* Espaçamento interno */
         max-width: 1200px; /* Define largura máxima para o container */
     }
+    .home-video iframe {
+        width: 80%;
 
+    }
     
 
     .home-video-description {
@@ -511,14 +589,14 @@ header .logo span {
     }
 
     .home-video-description h3 {
-        font-size: 4rem;
+        font-size: 5rem;
         margin: 0;
         color: #0c3756;
         font-family: "wondra", Sans-serif;
     }
     .home-video-description p {
         font-family: "Raleway", sans-serif;
-        font-size: 1.8rem;
+        font-size: 2rem;
         font-weight: 600;
         margin-top: 2rem;
         color: #0c3756;
@@ -527,39 +605,85 @@ header .logo span {
 
 
 
-
-.home-section .home-reserve {
+.wave-section {
+    position: relative;
+    width: 100%;
+    height: 40rem;
+    background-color: #0c3756;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 6rem;
 }
-.home-section .home-reserve .reserve-container {
-    padding: 0 1.5rem 6rem 1.5rem;
-    background-color: #f4f7ff;
+.custom-shape-divider-bottom-1732580705 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
 }
-.home-section .home-reserve .reserve-container h3 {
-    color: #0c3756;
+.custom-shape-divider-bottom-1732580705 svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 5rem;
+    object-fit: cover;
+}
+.custom-shape-divider-bottom-1732580705 .shape-fill {
+    fill: #f4f7ff;
+}
+
+.custom-shape-divider-top-1732580823 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1732580823 svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 5rem;
+}
+
+.custom-shape-divider-top-1732580823 .shape-fill {
+    fill: #f4f7ff;
+}
+
+.reserve-container {
+    padding: 0 2rem;
+}
+
+.reserve-container h3 {
+    color: #dfe2e4;
     font-size: 3rem;
     text-align: center;
     font-family: "wondra", Sans-serif;
     margin-bottom: 1rem;
 }
-.home-section .home-reserve .reserve-container p {
-    color: #0c3756;
+.reserve-container p {
+    color: #d8dcdf;
     font-size: 1.6rem;
     font-weight: 500;
     text-align: center;
     font-family: "Raleway", sans-serif;
     margin-bottom: 3rem;
 }
-.home-section .home-reserve .reserve-container .buttom {
+.reserve-container .buttom {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 90%;
     margin: 0 auto;
     padding: 1.2rem 2rem;
-    background-color: #0c3756;
+    border: 1px solid #fff;
 }
-.home-section .home-reserve .reserve-container .buttom a {
+.reserve-container .buttom a {
     font-size: 1.5rem;
     font-weight: 600;
     font-family: "Roboto Condensed", sans-serif;
@@ -568,44 +692,72 @@ header .logo span {
     color: #fff;
 }
 
-.home-section .maps {
-    width: 100%;
-    height: 35rem;
-    padding: 10px;
-}
-.home-section .home-reserve .maps iframe {
-    width: 100%;
-    height: 100%;
+@media screen and (min-width: 950px) {
+    .wave-section {
+        position: relative;
+        width: 100%;
+        height: 70rem;
+        background-color: #0c3756;
+    }
+    .custom-shape-divider-bottom-1732580705 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
+    .custom-shape-divider-bottom-1732580705 svg {
+        position: relative;
+        display: block;
+        width: calc(128% + 1.3px);
+        height: 146px;
+    }
+    .custom-shape-divider-bottom-1732580705 .shape-fill {
+        fill: #f4f7ff;
+    }
+    .custom-shape-divider-top-1732580823 {
+        position: absolute;
+        top: -1rem;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+    .custom-shape-divider-top-1732580823 svg {
+        position: relative;
+        display: block;
+        width: calc(128% + 1.3px);
+        height: 146px;
+    }
+    .custom-shape-divider-top-1732580823 .shape-fill {
+        fill: #f4f7ff;
+    }
+
+    .reserve-container {
+        max-width: 90rem;
+        margin: 0 auto;
+    }
+    .reserve-container h3 {
+        font-size: 5rem;
+        margin-bottom: 2rem
+    }
+    .reserve-container p {
+        font-size: 2.5rem;
+    }
+    .reserve-container .buttom {
+        max-width: 60rem;
+    }
+    .reserve-container .buttom a {
+        font-size: 2rem;
+    }
 }
 
-@media screen and (min-width: 950px) {
-    .home-section .home-reserve {
-        display: flex;
-        gap: 2rem;
-        padding: 0 3rem;
-    }
-    .home-section .home-reserve .reserve-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        flex: 1;
-        margin: 0 auto;
-        padding: 0;
-    }
-    .home-section .home-reserve .reserve-container .buttom {
-        width: 50%;
-    }
-    .home-section .home-reserve .maps {
-        flex: 1;
-        width: 100%;
-        height: 35rem;
-    }
-    .home-section .home-reserve .maps iframe {
-        width: 100%;
-        height: 100%;
-    }
-}
+
+
+
+
 
 
 
@@ -613,12 +765,19 @@ header .logo span {
 
 
 /* Acomodações start */
+.image-top-acomodacoes img {
+    width: 100%;
+    max-height: 50vh;
+    object-fit: cover;
+}
+
 .accommodations-container .accommodation {
-    margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
     position: relative;
-    padding: 2rem;
+    padding: 1rem;
+    margin: 2rem auto;
+    width: 90%;
 }
 .accommodations-container .accommodation .title {
     font-family: "wondra", Sans-serif;
@@ -675,43 +834,77 @@ header .logo span {
     color: #fff;
 }
 
-@media screen and (min-width: 768px) {
-    .accommodations-container .accommodation {
 
-        max-width: 400px;
+
+
+@media screen and (min-width: 950px) {
+    .accommodations-container {
+        margin-top: 8rem;
     }
-    .accommodations-container .accommodation .description {
-        text-align: left;
-        
-    }
-    .accommodations-container .accommodation .buttom {
-        margin: 0;
-    }
-}
-
-
-
-@media screen and (min-width: 990px) {
     .accommodations-container .accommodation {
         flex-direction: row;
         max-width: none;
-        border: 1px solid red;
+        width: 75%;
+        gap: 2rem;
+        margin-bottom: 10rem;
     }
+
     .accommodations-container .accommodation .infos {
+        position: relative;
+        display: flex;
         flex: 1;
+        flex-direction: column;
+        padding-top: 5rem;
+        padding-left: 1rem;
     }
-    .accommodations-container .accommodation .room {
+    .accommodations-container .accommodation .infos .title {
+        font-size: 4rem;
+        text-align: start;
+    }
+    .accommodations-container .accommodation .infos .description {
+        font-size: 2rem;
+        text-align: justify;
+    }
+    .accommodations-container .accommodation .infos .items {
+        max-height: none;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr)
+    }
+    .accommodations-container .accommodation .items span {
+        font-size: 1.6rem;
+        color: #4a899c;
+        width: 100%;
+    }
+
+
+
+    .accommodations-container .accommodation .slider {
         flex: 1;
+        margin: 0;
+        padding: 0;
     }
     
-    .accommodations-container .accommodation .room .swiper {
+    .accommodations-container .accommodation .slider .swiper {
         width: 100%;
-        height: 450px;
+        max-width: none;
+        height: 50rem;       
     }
+
+    
     .accommodations-container .accommodation .buttom {
         position: absolute;
-        bottom: 0;
+        bottom: 3rem;
+        width: 30rem;
     }
+    .accommodations-container .accommodation .buttom a {
+        font-size: 2rem;
+    }
+
+    .accommodations-container .mudar-ordem {
+        order: -1;
+    }
+
+
 }
 /* Acomodações end */
 
@@ -720,7 +913,21 @@ header .logo span {
 .contact-container {
     padding: 2rem 0 6rem 0;
 }
+
+.image-top-contato img {
+    width: 100%;
+    max-height: 50vh;
+    object-fit: cover;
+}
+
 .contact-container .form .form-infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.contact-container .form .form-infos .coluna {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -810,118 +1017,153 @@ header .logo span {
     justify-content: center;
 }
 
+@media screen and (min-width: 950px) {
+    .contact-container .form {
+        width: 70%;
+        min-height: 64rem;
+        margin: 0 auto;
+        position: relative;
+    }
+    .contact-container .form .form-infos {
+        gap: 3rem;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+    }
+    .contact-container .form .form-infos .coluna input, 
+    .contact-container .form .form-infos .coluna select {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-container .form .form-infos input,
+    .contact-container .form .form-infos select,
+    .contact-container .form .form-infos input::placeholder {
+        width: 50%;
+        height: 6rem;
+        font-size: 2rem;
+    }
+    .contact-container .form .form-mesage textarea {
+        font-size: 2rem;
+        width: 100%;
+    }
+    .contact-container .form .form-mesage textarea::placeholder {
+        font-size: 2rem;
+    }
+    .contact-container .form .buttom {
+        width: 50rem;
+        height: 6rem;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    .contact-container .form .buttom a {
+        width: 100%;
+        font-size: 2rem;
+    }
+}
 
 
-.footer-section .footer-container {
+
+
+
+
+.home-reserve .informacoes {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 2rem;
+}
+.home-reserve .informacoes .box {
+    padding: 2rem;
     background-color: #0c3756;
-    padding: 3rem 0;
 }
-.footer-section .footer-container .logo {
+.home-reserve .informacoes .box .titulo {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
-.footer-section .footer-container .logo img {
-    width: 12rem;
-    margin-bottom: 1rem;
-} 
-.footer-section .footer-container .logo span {
+.home-reserve .informacoes .box .titulo h3 {
     color: #fff;
-    font-size: 1.2rem;
-    font-weight: 500;
-    font-family: "Raleway", sans-serif;
+    font-size: 2rem;
+    font-family: "wondra", Sans-serif;
 }
-
-.footer-section .footer-container .links {
-    padding-top: 2rem;
-    display: flex;
-    gap: 1rem;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.footer-section .footer-container .links h3 {
+.home-reserve .informacoes .box .titulo i {
     color: #fff;
-    font-size: 3rem;
-    font-family: "Raleway", sans-serif;
+    font-size: 2rem;
 }
-.footer-section .footer-container .links span a {
-    color: #fff;
+.home-reserve .informacoes .box .descricao {
+    margin-top: 2rem;
+}
+.home-reserve .informacoes .box .descricao p {
     font-size: 1.6rem;
-    font-weight: 600;
-    font-family: "Raleway", sans-serif;
-}
-.footer-section .footer-container .links .socials {
-    
-    padding-top: 2rem;
-    display: flex;
-    width: 50%;
-    height: auto;
-    justify-content: space-around;
-    margin-bottom: 2rem;
-}
-.footer-section .footer-container .links .socials a {
-    background-color: #f1f1f1;
-    color: #0f290e;
-    border-radius: 50%;
-    font-size: 3rem;
-    padding: 1rem 1.5rem;
-}
-.footer-section .footer-container .contatos {
-    display: flex; 
-    gap: 1rem;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-}
-.footer-section .footer-container .contatos p {
-    padding: 1rem;
     color: #fff;
-    font-size: 1.6rem;
-    text-align: center;
-    font-family: "Raleway", sans-serif;
 }
-.footer-section .footer-container .contatos span {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-family: "Raleway", sans-serif;
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: #fff;
-    -webkit-text-fill-color: #fff; 
+.home-reserve .informacoes .box .descricao p a {
     -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+    color: inherit;
 }
-.footer-section .footer-container .contatos span i {
+.home-reserve .informacoes .box .descricao i {
     color: #fff;
-    font-size: 2.2rem;
+    padding: 1rem;
+    border-radius: 50%;
+    font-size: 4rem;
     margin-right: 1rem;
 }
-@media screen and (min-width: 990px) {
-    .footer-section .footer-container {
+
+
+.home-section .home-reserve .maps {
+    padding: 1rem;
+    height: 40rem;
+    margin: 6rem 0;
+}
+.home-section .home-reserve .maps iframe {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width: 950px) {
+    .home-section .home-reserve {
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 4rem;
     }
-    .footer-section .footer-container .logo,
-    .footer-section .footer-container .links,
-    .footer-section .footer-container .contatos {
-        padding: 2rem;
+    .home-reserve .informacoes {
+        height: 50rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    .footer-section .footer-container .logo img {
-        width: 20rem;
-        margin-bottom: 1rem;
-    }
-    .footer-section .footer-container .logo span {
-        font-size: 1.6rem;
-    }
-    .footer-section .footer-container .links .socials {
+    .home-reserve .informacoes .box {
         width: 100%;
-        justify-content: space-between;
+    }
+    .home-reserve .informacoes .box .titulo h3 {
+        font-size: 2.2rem;
+        letter-spacing: .2rem;
+    }
+    .home-reserve .informacoes .box .descricao p {
+        font-size: 1.8rem;
+        margin-bottom: .6rem;
+    }
+    .home-reserve .informacoes .box .titulo i {
+        font-size: 3rem;
+    }
+    .home-reserve .informacoes .box .descricao i {
+        font-size: 5rem;
+    }
+    
+    .home-section .home-reserve .maps {
+        flex: 1;
+        width: 100%;
+        height: 50rem;
+    }
+    .home-section .home-reserve .maps iframe {
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -930,8 +1172,41 @@ header .logo span {
 
 
 
+.footer-section .copyright {
+    background-color: #0c3756;
+    padding: 5rem 0;
+}
+.footer-section .copyright .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer-section .copyright .logo img {
+    width: 18rem;
+    margin-bottom: 3rem;
+} 
+.footer-section .copyright .logo span {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: "Raleway", sans-serif;
+}
+@media screen and (min-width: 950px)  {
+    .footer-section .copyright .logo span {
+        font-size: 2rem;
+    }   
+}
 
 
+
+
+
+.image-top-regulamentos img {
+    width: 100%;
+    max-height: 50vh;
+    object-fit: cover;
+}
 .regulations-container .regulation {
     margin-bottom: 2rem;
     padding: .6rem;
@@ -950,4 +1225,18 @@ header .logo span {
 .regulations-container .regulation ul li {
     font-family: "Raleway", sans-serif;
     font-size: 1.6rem;
+}
+@media screen and (min-width: 950px) {
+    .regulations-container .regulation {
+        width: 70%;
+        margin: 5rem auto;
+    }
+    .regulations-container .regulation h3 {
+        font-size: 3rem;
+    }
+    .regulations-container .regulation p,
+    .regulations-container .regulation ul li {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+}
 }
