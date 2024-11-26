@@ -103,7 +103,6 @@ body {
 
 
 /* Estios para imagem do topo */
-
 .image-top img{
     width: 100%;
     max-height: 75vh;
@@ -111,7 +110,7 @@ body {
 /* PRE CONFIGURAÇÕES END */
 
 
-/* HEADER STYLES STARTS */
+/* --------------- HEADER STYLES STARTS --------------- */
 header {
     position: fixed;
     top: 0;
@@ -168,7 +167,6 @@ header .buttom a {
     color: #fff;
 }
 
-/* Estilos para o logo */
 header .logo {
     border-radius: 50%;
     overflow: hidden;
@@ -183,7 +181,7 @@ header .logo span {
     font-size: 2rem;
 }
 
-/* Estilos para menu hamburguer */
+
 .fa-bars, .fa-times {
     padding: .2rem .6rem;
     border-radius: 5px;
@@ -204,14 +202,13 @@ header .logo span {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Cor preta com opacidade */
-    opacity: 0; /* Inicialmente invisível */
-    visibility: hidden; /* Inicialmente invisível e não ocupa espaço */
-    transition: opacity 1s ease, visibility 1s ease; /* Transição suave para opacity e visibility */
-    z-index: 98; /* Fica abaixo do menu */
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 1s ease; 
+    z-index: 98;
 }
 
-/* Media queries para header */
 @media (max-width: 1240px) {
     #menu {
         display: block !important;
@@ -269,9 +266,11 @@ header .logo span {
         display: none;
     }
 }
-/* HEADER STYLES END */
+/* --------------- HEADER STYLES END --------------- */
 
-/* HOME STYLES STARTS */
+
+/* --------------- HOME STYLES STARTS --------------- */
+/* Estilos para o slider */
 .slider-container {
     position: relative;
     max-width: 100%;
@@ -394,7 +393,6 @@ header .logo span {
     color: #216ead;
     font-family: "wondra", Sans-serif;
 }
-
 @media screen and (min-width: 950px) {
     .home-section .home-about .about-container {
         display: flex;
@@ -436,8 +434,7 @@ header .logo span {
     }
 }
 
-
-
+/* Estilos para o acomodacoes */
 .home-section .home-accommodations-container {
     background-color: #4a899c;
 }
@@ -526,68 +523,57 @@ header .logo span {
     .home-section .home-accommodations .home-accommodations-container .slider {
             margin: 0;
     }
-    
 }
 
-
-/* Estilos básicos para Mobile (telas menores) */
+/* Estilos para o video */
 .home-video-container {
     display: flex;
     flex-direction: column; 
     align-items: center;
-    gap: 10px; /* Espaçamento entre o vídeo e outros elementos */
-    padding: 10px; /* Espaçamento interno */
+    gap: 10px;
+    padding: 10px;
     margin: 10rem 0;
 }
-
 .home-video {
-    width: 100%; /* Ocupa toda a largura da tela */
+    width: 100%;
 }
-
 .home-video iframe {
-    width: 100%; /* O vídeo ocupa toda a largura do container */
-    aspect-ratio: 16 / 9; /* Mantém a proporção 16:9 */
-    border: none; /* Remove borda padrão */
+    width: 100%; 
+    aspect-ratio: 16 / 9; 
+    border: none; 
     border-radius: 10px;
 }
 
-/* Oculta a descrição no mobile */
 .home-video-description {
-    display: none; /* Desaparece no mobile */
+    display: none; 
 }
-
-/* Estilos para Desktop */
 @media screen and (min-width: 950px) {
     .home-video-container {
         padding: 3rem;
-        flex-direction: row; /* Vídeo e descrição lado a lado */
-        justify-content: center; /* Centraliza o conteúdo */
-        gap: 2rem; /* Espaçamento entre vídeo e descrição */
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
     }
-
     .home-video {
         flex: 1;
-        display: flex; /* Torna o vídeo flexível para alinhamento */
-        align-items: center; /* Centraliza verticalmente */
+        display: flex; 
+        align-items: center; 
         justify-content: center;
-        gap: 20px; /* Espaçamento interno */
-        max-width: 1200px; /* Define largura máxima para o container */
+        gap: 20px;
+        max-width: 1200px;
     }
     .home-video iframe {
         width: 80%;
-
     }
     
-
     .home-video-description {
-        display: flex; /* Torna a descrição visível */
-        flex: 1; /* Ocupa metade do espaço disponível */
-        max-width: 50%; /* Limita largura a 50% */
-        text-align: center; /* Alinha o texto à esquerda */
-        flex-direction: column; /* Mantém itens empilhados dentro da descrição */
-        justify-content: center; /* Centraliza verticalmente */
+        display: flex;
+        flex: 1;
+        max-width: 50%;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
     }
-
     .home-video-description h3 {
         font-size: 5rem;
         margin: 0;
@@ -603,8 +589,7 @@ header .logo span {
     }
 }
 
-
-
+/* Estilos para o waves */
 .wave-section {
     position: relative;
     width: 100%;
@@ -615,7 +600,7 @@ header .logo span {
     justify-content: center;
     margin-bottom: 6rem;
 }
-.custom-shape-divider-bottom-1732580705 {
+.wave-section .wave-top {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -623,18 +608,18 @@ header .logo span {
     overflow: hidden;
     line-height: 0;
 }
-.custom-shape-divider-bottom-1732580705 svg {
+.wave-section .wave-top svg {
     position: relative;
     display: block;
     width: 100%;
     height: 5rem;
     object-fit: cover;
 }
-.custom-shape-divider-bottom-1732580705 .shape-fill {
+.wave-section .wave-top .shape-fill {
     fill: #f4f7ff;
 }
 
-.custom-shape-divider-top-1732580823 {
+.wave-section .wave-bottom {
     position: absolute;
     top: 0;
     left: 0;
@@ -643,22 +628,19 @@ header .logo span {
     line-height: 0;
     transform: rotate(180deg);
 }
-
-.custom-shape-divider-top-1732580823 svg {
+.wave-section .wave-bottom svg {
     position: relative;
     display: block;
     width: 100%;
     height: 5rem;
 }
-
-.custom-shape-divider-top-1732580823 .shape-fill {
+.wave-section .wave-bottom .shape-fill {
     fill: #f4f7ff;
 }
 
 .reserve-container {
     padding: 0 2rem;
 }
-
 .reserve-container h3 {
     color: #dfe2e4;
     font-size: 3rem;
@@ -691,7 +673,6 @@ header .logo span {
     letter-spacing: .8px;
     color: #fff;
 }
-
 @media screen and (min-width: 950px) {
     .wave-section {
         position: relative;
@@ -699,7 +680,7 @@ header .logo span {
         height: 70rem;
         background-color: #0c3756;
     }
-    .custom-shape-divider-bottom-1732580705 {
+    .wave-section .wave-top {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -707,16 +688,16 @@ header .logo span {
         overflow: hidden;
         line-height: 0;
     }
-    .custom-shape-divider-bottom-1732580705 svg {
+    .wave-section .wave-top svg {
         position: relative;
         display: block;
         width: calc(128% + 1.3px);
         height: 146px;
     }
-    .custom-shape-divider-bottom-1732580705 .shape-fill {
+    .wave-section .wave-top .shape-fill {
         fill: #f4f7ff;
     }
-    .custom-shape-divider-top-1732580823 {
+    .wave-section .wave-bottom {
         position: absolute;
         top: -1rem;
         left: 0;
@@ -725,13 +706,13 @@ header .logo span {
         line-height: 0;
         transform: rotate(180deg);
     }
-    .custom-shape-divider-top-1732580823 svg {
+    .wave-section .wave-bottom svg {
         position: relative;
         display: block;
         width: calc(128% + 1.3px);
         height: 146px;
     }
-    .custom-shape-divider-top-1732580823 .shape-fill {
+    .wave-section .wave-bottom.shape-fill {
         fill: #f4f7ff;
     }
 
@@ -754,23 +735,114 @@ header .logo span {
     }
 }
 
+/* Estilos para os informaçoes de contato */
+.home-informacoes .informacoes {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 2rem;
+}
+.home-informacoes .informacoes .box {
+    padding: 2rem;
+    background-color: #0c3756;
+}
+.home-informacoes .informacoes .box .titulo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.home-informacoes .informacoes .box .titulo h3 {
+    color: #fff;
+    font-size: 2rem;
+    font-family: "wondra", Sans-serif;
+}
+.home-informacoes .informacoes .box .titulo i {
+    color: #fff;
+    font-size: 2rem;
+}
+.home-informacoes .informacoes .box .descricao {
+    margin-top: 2rem;
+}
+.home-informacoes .informacoes .box .descricao p {
+    font-size: 1.6rem;
+    color: #fff;
+}
+.home-informacoes .informacoes .box .descricao p a {
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+    color: inherit;
+}
+.home-informacoes .informacoes .box .descricao i {
+    color: #fff;
+    padding: 1rem;
+    border-radius: 50%;
+    font-size: 4rem;
+    margin-right: 1rem;
+}
+
+.home-informacoes .maps {
+    padding: 1rem;
+    height: 40rem;
+    margin: 6rem 0;
+}
+.home-informacoes .maps iframe {
+    width: 100%;
+    height: 100%;
+}
+@media screen and (min-width: 950px) {
+    .home-informacoes {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
+    .home-informacoes .informacoes {
+        height: 50rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .home-informacoes .informacoes .box {
+        width: 100%;
+    }
+    .home-informacoes .informacoes .box .titulo h3 {
+        font-size: 2.2rem;
+        letter-spacing: .2rem;
+    }
+    .home-informacoes .informacoes .box .descricao p {
+        font-size: 1.8rem;
+        margin-bottom: .6rem;
+    }
+    .home-informacoes .informacoes .box .titulo i {
+        font-size: 3rem;
+    }
+    .home-informacoes .informacoes .box .descricao i {
+        font-size: 5rem;
+    }
+    
+    .home-informacoes .maps {
+        flex: 1;
+        width: 100%;
+        height: 50rem;
+    }
+    .home-informacoes .maps iframe {
+        width: 100%;
+        height: 100%;
+    }
+}
 
 
-
-
-
-
-
-
-
-
-/* Acomodações start */
+/* -------------- ACOMODACOES STYLES STARTS --------------- */
+/* Estilo para imagem do top */
 .image-top-acomodacoes img {
     width: 100%;
     max-height: 50vh;
     object-fit: cover;
 }
 
+/* Estilo para as acomodacoes */
 .accommodations-container .accommodation {
     display: flex;
     flex-direction: column;
@@ -791,7 +863,6 @@ header .logo span {
     text-align: center;
     padding-top: 2rem;
     line-height: 2.4rem;
-    
 }
 
 .accommodations-container .accommodation .items {
@@ -833,10 +904,6 @@ header .logo span {
     letter-spacing: .8px;
     color: #fff;
 }
-
-
-
-
 @media screen and (min-width: 950px) {
     .accommodations-container {
         margin-top: 8rem;
@@ -848,7 +915,6 @@ header .logo span {
         gap: 2rem;
         margin-bottom: 10rem;
     }
-
     .accommodations-container .accommodation .infos {
         position: relative;
         display: flex;
@@ -875,22 +941,16 @@ header .logo span {
         color: #4a899c;
         width: 100%;
     }
-
-
-
     .accommodations-container .accommodation .slider {
         flex: 1;
         margin: 0;
         padding: 0;
     }
-    
     .accommodations-container .accommodation .slider .swiper {
         width: 100%;
         max-width: none;
         height: 50rem;       
     }
-
-    
     .accommodations-container .accommodation .buttom {
         position: absolute;
         bottom: 3rem;
@@ -899,27 +959,67 @@ header .logo span {
     .accommodations-container .accommodation .buttom a {
         font-size: 2rem;
     }
-
     .accommodations-container .mudar-ordem {
         order: -1;
     }
-
-
 }
-/* Acomodações end */
+/* -------------- ACOMODACOES STYLES END --------------- */
 
 
-/* Contato start */
-.contact-container {
-    padding: 2rem 0 6rem 0;
+/* -------------- REGULAMENTOS STYLES STARTS --------------- */
+.image-top-regulamentos img {
+    width: 100%;
+    max-height: 50vh;
+    object-fit: cover;
+}
+.regulations-container .regulation {
+    margin-bottom: 2rem;
+    padding: .6rem;
+}
+.regulations-container .regulation h3 {
+    font-family: "Raleway", sans-serif;
+    font-size: 2rem;
+    color: #0c3756;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+}
+.regulations-container .regulation ul {
+    padding-left: 3rem;
+}
+.regulations-container .regulation p,
+.regulations-container .regulation ul li {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.6rem;
+}
+@media screen and (min-width: 950px) {
+    .regulations-container .regulation {
+        width: 70%;
+        margin: 5rem auto;
+    }
+    .regulations-container .regulation h3 {
+        font-size: 3rem;
+    }
+    .regulations-container .regulation p,
+    .regulations-container .regulation ul li {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
 }
 
+/* -------------- FOOTER STYLES END --------------- */
+
+/* -------------- CONTATO STYLES STARTS --------------- */
+/* Estilo para imagem do top */
 .image-top-contato img {
     width: 100%;
     max-height: 50vh;
     object-fit: cover;
 }
+.contact-container {
+    padding: 2rem 0 6rem 0;
+}
 
+/* Estilos para o formulario */
 .contact-container .form .form-infos {
     display: flex;
     flex-direction: column;
@@ -996,14 +1096,12 @@ header .logo span {
     font-size: 1.5rem;
     color: #0c3756;
 }
-
 .contact-container .form .buttom {
     margin-top: 2rem;
     width: 100%;
     height: 4rem;
     display: flex;
     justify-content: center;
-    
 }
 .contact-container .form .buttom a {
     width: 90%;
@@ -1016,7 +1114,6 @@ header .logo span {
     align-items: center;
     justify-content: center;
 }
-
 @media screen and (min-width: 950px) {
     .contact-container .form {
         width: 70%;
@@ -1035,7 +1132,6 @@ header .logo span {
         width: 100%;
         margin-bottom: 1.5rem;
     }
-
     .contact-container .form .form-infos input,
     .contact-container .form .form-infos select,
     .contact-container .form .form-infos input::placeholder {
@@ -1062,116 +1158,9 @@ header .logo span {
         font-size: 2rem;
     }
 }
+/* -------------- CONTATO STYLES END --------------- */
 
-
-
-
-
-
-.home-reserve .informacoes {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 0 2rem;
-}
-.home-reserve .informacoes .box {
-    padding: 2rem;
-    background-color: #0c3756;
-}
-.home-reserve .informacoes .box .titulo {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.home-reserve .informacoes .box .titulo h3 {
-    color: #fff;
-    font-size: 2rem;
-    font-family: "wondra", Sans-serif;
-}
-.home-reserve .informacoes .box .titulo i {
-    color: #fff;
-    font-size: 2rem;
-}
-.home-reserve .informacoes .box .descricao {
-    margin-top: 2rem;
-}
-.home-reserve .informacoes .box .descricao p {
-    font-size: 1.6rem;
-    color: #fff;
-}
-.home-reserve .informacoes .box .descricao p a {
-    -webkit-tap-highlight-color: transparent;
-    text-decoration: none;
-    color: inherit;
-}
-.home-reserve .informacoes .box .descricao i {
-    color: #fff;
-    padding: 1rem;
-    border-radius: 50%;
-    font-size: 4rem;
-    margin-right: 1rem;
-}
-
-
-.home-section .home-reserve .maps {
-    padding: 1rem;
-    height: 40rem;
-    margin: 6rem 0;
-}
-.home-section .home-reserve .maps iframe {
-    width: 100%;
-    height: 100%;
-}
-
-@media screen and (min-width: 950px) {
-    .home-section .home-reserve {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-        margin-bottom: 4rem;
-    }
-    .home-reserve .informacoes {
-        height: 50rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .home-reserve .informacoes .box {
-        width: 100%;
-    }
-    .home-reserve .informacoes .box .titulo h3 {
-        font-size: 2.2rem;
-        letter-spacing: .2rem;
-    }
-    .home-reserve .informacoes .box .descricao p {
-        font-size: 1.8rem;
-        margin-bottom: .6rem;
-    }
-    .home-reserve .informacoes .box .titulo i {
-        font-size: 3rem;
-    }
-    .home-reserve .informacoes .box .descricao i {
-        font-size: 5rem;
-    }
-    
-    .home-section .home-reserve .maps {
-        flex: 1;
-        width: 100%;
-        height: 50rem;
-    }
-    .home-section .home-reserve .maps iframe {
-        width: 100%;
-        height: 100%;
-    }
-}
-
-
-
-
-
-
+/* -------------- FOOTER STYLES STARTS --------------- */
 .footer-section .copyright {
     background-color: #0c3756;
     padding: 5rem 0;
@@ -1197,46 +1186,8 @@ header .logo span {
         font-size: 2rem;
     }   
 }
+/* -------------- FOOTER STYLES END --------------- */
 
 
 
 
-
-.image-top-regulamentos img {
-    width: 100%;
-    max-height: 50vh;
-    object-fit: cover;
-}
-.regulations-container .regulation {
-    margin-bottom: 2rem;
-    padding: .6rem;
-}
-.regulations-container .regulation h3 {
-    font-family: "Raleway", sans-serif;
-    font-size: 2rem;
-    color: #0c3756;
-    padding-left: 2rem;
-    margin-bottom: 1rem;
-}
-.regulations-container .regulation ul {
-    padding-left: 3rem;
-}
-.regulations-container .regulation p,
-.regulations-container .regulation ul li {
-    font-family: "Raleway", sans-serif;
-    font-size: 1.6rem;
-}
-@media screen and (min-width: 950px) {
-    .regulations-container .regulation {
-        width: 70%;
-        margin: 5rem auto;
-    }
-    .regulations-container .regulation h3 {
-        font-size: 3rem;
-    }
-    .regulations-container .regulation p,
-    .regulations-container .regulation ul li {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-}
-}
