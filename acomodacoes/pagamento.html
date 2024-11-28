@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento - CATRE</title>
+</head>
+<body>
+
+    <h1>Confirme sua Reserva</h1>
+
+    <p>Você está reservando o <span id="bloco"></span></p>
+    <p>Data de Entrada: <span id="check_in"></span></p>
+    <p>Data de Saída: <span id="check_out"></span></p>
+
+    <form id="formPagamento">
+        <label for="nome">Nome no Cartão:</label>
+        <input type="text" id="nome" required><br>
+
+        <label for="cartao">Número do Cartão:</label>
+        <input type="text" id="cartao" required><br>
+
+        <button type="submit">Pagar</button>
+    </form>
+
+    <script>
+        // Função para pegar os parâmetros da URL
+        function getURLParameters() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                bloco: params.get("bloco"),
+                id: params.get("id"),
+                check_in: params.get("check_in"),
+                check_out: params.get("check_out")
+            };
+        }
+
+        // Ao carregar a página, pega os dados da URL e exibe na tela
+        const { bloco, check_in, check_out } = getURLParameters();
+        document.getElementById("bloco").textContent = bloco;
+        document.getElementById("check_in").textContent = check_in;
+        document.getElementById("check_out").textContent = check_out;
+
+        // Evento para processar o pagamento
+        document.getElementById("formPagamento").onsubmit = function(event) {
+            event.preventDefault();
+            alert("Pagamento realizado com sucesso!");
+            window.location.href = "confirmacao.html"; // Página de confirmação da reserva
+        };
+    </script>
+
+</body>
+</html>

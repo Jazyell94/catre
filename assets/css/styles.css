@@ -911,7 +911,7 @@ header .logo span {
     .accommodations-container .accommodation {
         flex-direction: row;
         max-width: none;
-        width: 75%;
+        width: 80%;
         gap: 2rem;
         margin-bottom: 10rem;
     }
@@ -965,6 +965,112 @@ header .logo span {
 }
 /* -------------- ACOMODACOES STYLES END --------------- */
 
+/* -------------- PACOTES STYLES STARTS --------------- */
+
+.pacotes-container .pacote {
+    padding: 2rem;
+    margin: 2rem auto 5rem auto;
+}
+
+.pacotes-container .pacote .infos .title {
+    font-family: "wondra", Sans-serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    text-align: center;
+    color: #0c3756;
+    margin-bottom: 1rem;
+}
+.pacotes-container .pacote .infos span {
+    font-size: 1.8rem;
+    display: block;
+    text-align: center;
+}
+.pacotes-container .pacote .inputs {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem auto;
+}
+.pacotes-container .pacote .inputs input {
+    background-color: #ccc;
+    font-size: 1.5rem;
+    height: 4rem;
+    width: 10rem;
+    padding-left: 1rem;
+}
+.pacotes-container .pacote .inputs input::placeholder {
+    font-size: 1.5rem;
+}
+.pacotes-container .pacote .buttom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin: 0 auto;
+    padding: 1.2rem 2rem;
+    background-color: #0c3756;
+}
+.pacotes-container .pacote .buttom a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: "Roboto Condensed", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    color: #fff;
+}
+.pacotes-container .pacote .image {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 2rem;
+}
+.pacotes-container .pacote .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media screen and (min-width: 950px) {
+    .pacotes-container .pacote {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8rem;
+        width: 80%;
+        margin-top: 6rem;
+    }
+    .pacotes-container .pacote .infos .title {
+        font-size: 4rem;
+        text-align: start;
+        margin-bottom: 2rem;
+    }
+    .pacotes-container .pacote .infos span {
+        text-align: start;
+        font-size: 2rem;
+    }
+    .pacotes-container .pacote .infos .inputs {
+        justify-content: start;
+        gap: 2rem;
+        margin: 4rem 0;
+    }
+    .pacotes-container .pacote .infos .inputs input {
+        width: 15rem;
+    }
+    .pacotes-container .pacote .infos .inputs input,
+    .pacotes-container .pacote .infos .inputs input::placeholder {
+       font-size: 2rem;
+    }
+    .pacotes-container .pacote .infos .buttom {
+        margin: 0;
+        width: 32.2rem;
+    }
+    .pacotes-container .pacote .infos .buttom a {
+        font-size: 2rem;
+    }
+    .pacotes-container .pacote .image {
+        width: 70rem;
+        height: 40rem;
+        margin: 0;
+    }
+}
+/* -------------- PACOTES STYLES END --------------- */
 
 /* -------------- REGULAMENTOS STYLES STARTS --------------- */
 .image-top-regulamentos img {
