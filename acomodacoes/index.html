@@ -74,7 +74,7 @@
                     <span>Chuveiro aquecido</span>
                 </div>
                 <div class="buttom">
-                    <a href="reservar.html?bloco=Bloco%20A&id=1" class="reserve-now">Reserve Agora</a>
+                    <a href="#" data-bloco="Bloco A" class="reserve-now reserve-btn">Reserve Agora</a>
                 </div>
             </div>
             <div class="slider">
@@ -213,9 +213,27 @@
         </div>
     </section>
 
+
+
+    <script>
+        $(".reserve-btn").click(function (event) {
+            event.preventDefault(); // Previne o comportamento padrão do link
+    
+            // Obtém o bloco do atributo data-bloco
+            const bloco = $(this).data("bloco");
+    
+            // Armazena o bloco no sessionStorage
+            sessionStorage.setItem("blocoEscolhido", bloco);
+    
+            // Redireciona para a página de reserva
+            window.location.href = "reservar";
+        });
+    </script>
+    
+    
+
     <!-- LINK PARA O JS LOCAL -->
     <script src="../assets/js/script.js"></script>
-    
     <!-- LINK PARA O JS DO SWIPER -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
