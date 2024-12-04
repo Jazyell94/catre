@@ -16,6 +16,15 @@
 
     <!-- LINK PARA CSS -->
     <link rel="stylesheet" href="../assets/css/styles.css">
+
+    
+    
+    <link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css">
+    <script src="https://unpkg.com/photoswipe@5/dist/photoswipe.min.js"></script>
+    <script src="https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.min.js" type="module"></script>
+
+
+    
 </head>
 <body>
     <header class="header" id="header">
@@ -58,6 +67,31 @@
 
     
 
+    
+    <section class="restaurante-container">
+        <div class="my-gallery">
+            <a href="../assets/images/restaurante/frente.jpeg" data-pswp-width="900" data-pswp-height="1100" class="image">
+                <img src="../assets/images/restaurante/frente.jpeg" alt="Imagem 1">
+            </a>
+            <a href="../assets/images/restaurante/rest1.jpeg" data-pswp-width="900" data-pswp-height="1100" class="image">
+                <img src="../assets/images/restaurante/rest1.jpeg" alt="Imagem 1">
+            </a>
+            <a href="../assets/images/restaurante/rest2.jpeg" data-pswp-width="900" data-pswp-height="1100" class="image">
+                <img src="../assets/images/restaurante/rest2.jpeg" alt="Imagem 2">
+            </a>
+            <a href="../assets/images/restaurante/rest3.jpeg" data-pswp-width="1200" data-pswp-height="900" class="image">
+                <img src="../assets/images/restaurante/rest3.jpeg" alt="Imagem 3">
+            </a>
+            <a href="../assets/images/restaurante/rest4.jpeg" data-pswp-width="1200" data-pswp-height="900" class="image"> 
+                <img src="../assets/images/restaurante/rest4.jpeg" alt="Imagem 3">
+            </a>
+          </div>
+          
+    </section>
+
+
+
+
     <section class="footer-section">
         <div class="copyright">
             <div class="logo">
@@ -72,5 +106,20 @@
 
     <!-- LINK PARA O JS DO SWIPER -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+   
+    <script type="module">
+        import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.min.js';
+      
+        const lightbox = new PhotoSwipeLightbox({
+          gallery: '.my-gallery', // Seletor da galeria
+          children: 'a',          // Seletor para os itens (links)
+          pswpModule: () => import('https://unpkg.com/photoswipe@5/dist/photoswipe.esm.min.js'),
+        });
+      
+        lightbox.init();
+    </script>
+      
+
 </body>
 </html>
