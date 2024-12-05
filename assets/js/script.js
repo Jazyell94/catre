@@ -192,6 +192,39 @@ updateSlidesToShow();
 startAutoplay();
 
 
+// SCROLLREVEAL
+document.addEventListener('DOMContentLoaded', function () {
+  const sr = ScrollReveal({
+    distance: '80px',
+    duration: 1000,
+    easing: 'ease-in-out',
+    reset: true
+  });
 
 
+  sr.reveal('.heading-home', { origin: 'top', delay: 100 });
+  sr.reveal('.slider-container', { origin: 'top', interval: 100 });
 
+  sr.reveal('.home-about .image', { origin: 'left', delay: 200 });
+  sr.reveal('.home-about .text h3', { delay: 200 });
+  sr.reveal('.home-about .text p', { delay: 300 });
+  sr.reveal('.home-about .icons', { delay: 400 });
+
+  sr.reveal('.home-accommodations .text h3', { delay: 200 });
+  sr.reveal('.home-accommodations .text p', { delay: 300 });
+  sr.reveal('.home-accommodations .text .buttom', { delay: 400 });
+  sr.reveal('.home-accommodations .slider', { origin: 'rigth', interval: 400 });
+
+  sr.reveal('.home-video-container .home-video', { delay: 400 });
+  sr.reveal('.home-video-container .home-video-description', { delay: 600 });
+
+  sr.reveal('.wave-section', { distance: '120px', delay: 600 });
+  sr.reveal('.wave-section .content', { delay: 400 });
+
+  sr.reveal('.home-informacoes .informacoes .b1', { interval: 200 });
+  sr.reveal('.home-informacoes .informacoes .b2', { interval: 300 });
+  sr.reveal('.home-informacoes .informacoes .b3', { interval: 400 });
+  sr.reveal('.home-informacoes .maps', { interval: 500 });
+  
+
+});

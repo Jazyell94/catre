@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
 @font-face {
     font-family: 'wondra';
@@ -9,6 +11,25 @@
     font-weight: normal;
     font-style: normal;
 }
+
+:root {
+    --cor-body: #f0fcfe;
+    --cor-background-primario: #3a728e;
+    --cor-background-secundario: #86b6c6;
+    --cor-texto-primaria: #0c3756;
+    --cor-texto-secundario: #b7d9e2;
+    --cor-texto-terciario: #f0fcfe;
+    --cor-botoes: #0c3756;
+
+    --font-heading: "wondra", Sans-serif;
+    --font-body: "Raleway", sans-serif;
+    --font-botoes: "Roboto Condensed", sans-serif;
+    --font-input: "Rubik", sans-serif;
+}
+
+
+
+
 
 /* PRE CONFIGURAÇÕES STARTS */
 * {
@@ -25,8 +46,8 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    font-family: "Raleway", sans-serif;
-    background-color: #f4f7ff;
+    font-family: var(--font-body);
+    background-color: var(--cor-body);
 }
 
 /* Estilos para os slider*/
@@ -63,16 +84,17 @@ body {
 
 /* Estilos para heading */
 .heading {
+    display: flex;
+    flex-direction: column;
     padding: 2rem;
     margin-top: 2rem;
 }
 .heading h3 {
-    font-family: "wondra", Sans-serif;
+    font-family: var(--font-heading);
     font-size: 3rem;
     font-weight: 600;
     text-align: center;
-    color: #0c3756;
-    
+    color: var(--cor-texto-primaria);
 }
 .heading p {
     font-size: 1.4rem;
@@ -83,7 +105,7 @@ body {
 }
 .heading p span,
 .heading p span a {
-    color: #0c3756;
+    color: var(--cor-texto-primaria);
     font-weight: 600;
     text-decoration: none;
     -kit-tap-highlight-color: transparent;
@@ -92,20 +114,22 @@ body {
     .heading h3 {
         font-size: 4.8rem;
     }
+    .heading h4 {
+        font-size: 6.5rem;
+    }
     .heading p {
         font-size: 2rem;
         line-height: 3.3rem;
         width: 70%;
         margin: 0 auto;
-
     }
 }
 
-
 /* Estios para imagem do topo */
-.image-top img{
+.image-top img {
     width: 100%;
-    max-height: 75vh;
+    max-height: 50vh;
+    object-fit: cover;
 }
 /* PRE CONFIGURAÇÕES END */
 
@@ -138,15 +162,15 @@ header .navbar li {
 }
 header .navbar ul li a {
     font-size: 1.6rem;
-    color: #e9e9e9;
+    color: var(--cor-texto-terciario);
     font-weight: 600;
     letter-spacing: 0.04rem;
-    font-family: "wondra", Sans-serif;
+    font-family: var(--font-heading);
 }
 header .navbar ul li a.active,
 header .navbar ul li a:hover {   
     padding: 0.5rem 0;
-    color: #0c3756;
+    color: var(--cor-texto-primaria);
 }
 
 
@@ -156,15 +180,15 @@ header .buttom {
     justify-content: center;
     width: 20rem;
     padding: 1.2rem 2rem;
-    background-color: #0c3756;
+    background-color: var(--cor-botoes);
 }
 header .buttom a {
     font-size: 1.5rem;
     font-weight: 600;
-    font-family: "wondra", Sans-serif;
+    font-family: var(--font-heading);
     text-transform: uppercase;
     letter-spacing: .8px;
-    color: #fff;
+    color: var(--cor-texto-terciario);
 }
 
 header .logo {
@@ -181,14 +205,13 @@ header .logo span {
     font-size: 2rem;
 }
 
-
 .fa-bars, .fa-times {
     padding: .2rem .6rem;
     border-radius: 5px;
     font-size: 3.5rem;
     cursor: pointer;
     z-index: 100;
-    color: #0c3756;
+    color: var(--cor-texto-primaria);
     display: none !important;
     transition: transform 0.8s ease; 
 }
@@ -226,7 +249,7 @@ header .logo span {
         padding-top: 8rem;
         text-align: left;
         align-items: flex-start;
-        background-color: #ccc;
+        background-color: var(--cor-body);
         overflow: hidden;
         z-index: 99;
         transition: right .6s ease;
@@ -253,8 +276,8 @@ header .logo span {
     header .navbar ul li a.active,
     header .navbar ul li a:hover {
         padding: 1rem .8rem 1rem 2rem;
-        color: #fff;
-        background-color: #0c3756;
+        color: var(--cor-texto-terciario);
+        background-color: var(--cor-background-primario);
     }
     .fa-times {
         transform: rotate(180deg);
@@ -270,6 +293,33 @@ header .logo span {
 
 
 /* --------------- HOME STYLES STARTS --------------- */
+.heading-home {
+    padding: 3rem 0 2rem 0;
+    text-align: center;
+}
+.heading-home h4 {
+    position: relative;
+    display: inline;
+    line-height: 6rem;
+    font-size: 6rem;
+    font-family: "Archivo Black", sans-serif;
+    color: var(--cor-background-primario)
+}
+@media screen and (min-width: 950px) {
+    .heading-home h3 {
+        font-size: 5rem;
+    }
+    .heading-home h4 {
+        font-size: 15rem;
+        line-height: 15rem;
+    }
+    .heading-home h4::before {
+        bottom: 10px;
+        height: 10px;
+        display: none;
+    }
+}
+
 /* Estilos para o slider */
 .slider-container {
     position: relative;
@@ -336,7 +386,7 @@ header .logo span {
 /* Estilos para o about */
 .home-section .home-about .about-container {
     margin-top: 6rem;  
-    background-color: #0c3756;
+    background-color: var(--cor-background-primario);
 }
 
 .home-section .home-about .about-container .image {
@@ -351,21 +401,19 @@ header .logo span {
 .home-section .home-about .about-container .text {
     flex: 1;
     padding: 1.5rem;
-    background-color: #0c3756;
 }
 .home-section .home-about .about-container .text h3 {
-    color: #216ead;
+    color: var(--cor-background-secundario);
     font-size: 3.2rem;
     text-align: center;
-    font-family: "wondra", Sans-serif;
+    font-family: var(--font-heading);
     margin: 1.5rem 0;
 }
 .home-section .home-about .about-container .text p {
-    color: #fff;
+    color: var(--cor-texto-terciario);
     font-size: 1.6rem;
     font-weight: 500;
     text-align: center;
-    font-family: "Raleway", sans-serif;
     margin: 3rem 0;
 }
 .home-section .home-about .about-container .text p:nth-child(2) {
@@ -385,13 +433,13 @@ header .logo span {
 }
 .home-section .home-about .about-container .icons .icon svg {
     width: 8rem;
-    fill: #216ead;
+    fill: var(--cor-background-secundario);
     margin-bottom: 1rem;
 }
 .home-section .home-about .about-container .icons span {
     font-size: 1.2rem;
-    color: #216ead;
-    font-family: "wondra", Sans-serif;
+    color: var(--cor-background-secundario);
+    font-family: var(--font-heading);
 }
 @media screen and (min-width: 950px) {
     .home-section .home-about .about-container {
@@ -412,7 +460,6 @@ header .logo span {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        
     }
     .home-section .home-about .about-container .text h3 {
         font-size: 5rem;
@@ -436,25 +483,24 @@ header .logo span {
 
 /* Estilos para o acomodacoes */
 .home-section .home-accommodations-container {
-    background-color: #4a899c;
+    background-color: var(--cor-background-secundario);
 }
 .home-section .home-accommodations .home-accommodations-container .text {
     flex: 1;
     padding: 1.5rem;
 }
 .home-section .home-accommodations .home-accommodations-container .text h3 {
-    color: #0c3756;
+    color: var(--cor-texto-primaria);
     font-size: 3rem;
     text-align: center;
-    font-family: "wondra", Sans-serif;
+    font-family: var(--font-heading);
     margin: 3rem 0 0 0;
 }
 .home-section .home-accommodations .home-accommodations-container .text p {
-    color: #0c3756;
+    color: var(--cor-texto-primaria);
     font-size: 1.6rem;
     font-weight: 500;
     text-align: center;
-    font-family: "Raleway", sans-serif;
     margin: 3rem 0;
 }
 .home-section .home-accommodations .home-accommodations-container .text .buttom {
@@ -464,15 +510,15 @@ header .logo span {
     width: 90%;
     margin: 0 auto;
     padding: 1.2rem 2rem;
-    background-color: #0c3756;
+    background-color: var(--cor-botoes);
 }
 .home-section .home-accommodations .home-accommodations-container .text .buttom a {
     font-size: 1.5rem;
     font-weight: 600;
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: var(--font-botoes);
     text-transform: uppercase;
     letter-spacing: .8px;
-    color: #fff;
+    color: var(--cor-texto-terciario);
 }
 .home-section .home-accommodations .home-accommodations-container .slider {
     flex: 1;
@@ -487,7 +533,6 @@ header .logo span {
         flex-direction: column;
         align-items: start;
         justify-content: center;
-        
     }
     .home-section .home-accommodations .home-accommodations-container .text h3 {
         font-size: 5rem;
@@ -496,7 +541,7 @@ header .logo span {
     .home-section .home-accommodations .home-accommodations-container .text p {
         font-size: 2rem;
         text-align: justify;
-        font-weight: 600;
+        font-weight: 500;
         line-height: 3.3rem;
         margin: 2rem 0;
     }
@@ -577,15 +622,14 @@ header .logo span {
     .home-video-description h3 {
         font-size: 5rem;
         margin: 0;
-        color: #0c3756;
-        font-family: "wondra", Sans-serif;
+        color: var(--cor-texto-primaria);
+        font-family: var(--font-heading);
     }
     .home-video-description p {
-        font-family: "Raleway", sans-serif;
         font-size: 2rem;
         font-weight: 600;
         margin-top: 2rem;
-        color: #0c3756;
+        color: var(--cor-texto-primaria);
     }
 }
 
@@ -594,7 +638,7 @@ header .logo span {
     position: relative;
     width: 100%;
     height: 40rem;
-    background-color: #0c3756;
+    background-color: var(--cor-background-primario);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -602,7 +646,7 @@ header .logo span {
 }
 .wave-section .wave-top {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -616,12 +660,12 @@ header .logo span {
     object-fit: cover;
 }
 .wave-section .wave-top .shape-fill {
-    fill: #f4f7ff;
+    fill: var(--cor-body);
 }
 
 .wave-section .wave-bottom {
     position: absolute;
-    top: 0;
+    top: -1px;
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -635,25 +679,24 @@ header .logo span {
     height: 5rem;
 }
 .wave-section .wave-bottom .shape-fill {
-    fill: #f4f7ff;
+    fill: var(--cor-body);
 }
 
 .reserve-container {
     padding: 0 2rem;
 }
 .reserve-container h3 {
-    color: #dfe2e4;
+    color: var(--cor-texto-terciario);
     font-size: 3rem;
     text-align: center;
-    font-family: "wondra", Sans-serif;
+    font-family: var(--font-heading);
     margin-bottom: 1rem;
 }
 .reserve-container p {
-    color: #d8dcdf;
+    color: var(--cor-texto-terciario);
     font-size: 1.6rem;
     font-weight: 500;
     text-align: center;
-    font-family: "Raleway", sans-serif;
     margin-bottom: 3rem;
 }
 .reserve-container .buttom {
@@ -663,22 +706,21 @@ header .logo span {
     width: 90%;
     margin: 0 auto;
     padding: 1.2rem 2rem;
-    border: 1px solid #fff;
+    border: 1px solid var(--cor-texto-terciario);
 }
 .reserve-container .buttom a {
     font-size: 1.5rem;
     font-weight: 600;
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: var(--font-botoes);
     text-transform: uppercase;
     letter-spacing: .8px;
-    color: #fff;
+    color: var(--cor-texto-terciario);
 }
 @media screen and (min-width: 950px) {
     .wave-section {
         position: relative;
         width: 100%;
         height: 70rem;
-        background-color: #0c3756;
     }
     .wave-section .wave-top {
         position: absolute;
@@ -694,9 +736,6 @@ header .logo span {
         width: calc(128% + 1.3px);
         height: 146px;
     }
-    .wave-section .wave-top .shape-fill {
-        fill: #f4f7ff;
-    }
     .wave-section .wave-bottom {
         position: absolute;
         top: -1rem;
@@ -711,9 +750,6 @@ header .logo span {
         display: block;
         width: calc(128% + 1.3px);
         height: 146px;
-    }
-    .wave-section .wave-bottom.shape-fill {
-        fill: #f4f7ff;
     }
 
     .reserve-container {
@@ -745,7 +781,7 @@ header .logo span {
 }
 .home-informacoes .informacoes .box {
     padding: 2rem;
-    background-color: #0c3756;
+    background-color: var(--cor-background-secundario);
 }
 .home-informacoes .informacoes .box .titulo {
     display: flex;
@@ -753,20 +789,20 @@ header .logo span {
     justify-content: space-between;
 }
 .home-informacoes .informacoes .box .titulo h3 {
-    color: #fff;
+    color: var(--cor-texto-primaria);
     font-size: 2rem;
-    font-family: "wondra", Sans-serif;
 }
 .home-informacoes .informacoes .box .titulo i {
-    color: #fff;
+    color: var(--cor-texto-primaria);
     font-size: 2rem;
 }
 .home-informacoes .informacoes .box .descricao {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 .home-informacoes .informacoes .box .descricao p {
     font-size: 1.6rem;
-    color: #fff;
+    font-weight: 500;
+    color: var(--cor-texto-primaria);
 }
 .home-informacoes .informacoes .box .descricao p a {
     -webkit-tap-highlight-color: transparent;
@@ -774,7 +810,7 @@ header .logo span {
     color: inherit;
 }
 .home-informacoes .informacoes .box .descricao i {
-    color: #fff;
+    color: var(--cor-texto-primaria);
     padding: 1rem;
     border-radius: 50%;
     font-size: 4rem;
@@ -835,13 +871,6 @@ header .logo span {
 
 
 /* -------------- ACOMODACOES STYLES STARTS --------------- */
-/* Estilo para imagem do top */
-.image-top-acomodacoes img {
-    width: 100%;
-    max-height: 50vh;
-    object-fit: cover;
-}
-
 /* Estilo para as acomodacoes */
 .accommodations-container .accommodation {
     display: flex;
@@ -852,11 +881,11 @@ header .logo span {
     width: 90%;
 }
 .accommodations-container .accommodation .title {
-    font-family: "wondra", Sans-serif;
+    font-family: var(--font-heading);
     font-size: 2.8rem;
     font-weight: 600;
     text-align: center;
-    color: #0c3756;
+    color: var(--cor-texto-primaria);
 }
 .accommodations-container .accommodation .description {
     font-size: 1.6rem;
@@ -894,15 +923,15 @@ header .logo span {
     width: 70%;
     margin: 2rem auto;
     padding: 1.2rem 2rem;
-    background-color: #0c3756;
+    background-color: var(--cor-background-primario);
 }
 .accommodations-container .accommodation .buttom a {
     font-size: 1.5rem;
     font-weight: 600;
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: var(--font-botoes);
     text-transform: uppercase;
     letter-spacing: .8px;
-    color: #fff;
+    color: var(--cor-texto-terciario);
 }
 @media screen and (min-width: 950px) {
     .accommodations-container {
@@ -938,7 +967,6 @@ header .logo span {
     }
     .accommodations-container .accommodation .items span {
         font-size: 1.6rem;
-        color: #4a899c;
         width: 100%;
     }
     .accommodations-container .accommodation .slider {
@@ -983,21 +1011,28 @@ header .logo span {
     height: 100%;
     object-fit: cover;
 }
+@media screen and (min-width: 950px) {
+    .restaurante-container .my-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .restaurante-container .my-gallery .image {
+        height: 50rem;
+    }
+}
 /* -------------- RESTAURANTE STYLES END --------------- */
 
 /* -------------- PACOTES STYLES STARTS --------------- */
-
 .pacotes-container .pacote {
     padding: 2rem;
     margin: 2rem auto 5rem auto;
 }
-
 .pacotes-container .pacote .infos .title {
-    font-family: "wondra", Sans-serif;
+    font-family: var(--font-heading);
     font-size: 2.8rem;
     font-weight: 600;
     text-align: center;
-    color: #0c3756;
+    color: var(--cor-texto-primaria);
     margin-bottom: 1rem;
 }
 .pacotes-container .pacote .infos span {
@@ -1011,7 +1046,8 @@ header .logo span {
     margin: 2rem auto;
 }
 .pacotes-container .pacote .inputs input {
-    background-color: #ccc;
+    background-color: var(--cor-background-secundario);
+    color: var(--cor-texto-terciario);
     font-size: 1.5rem;
     height: 4rem;
     width: 10rem;
@@ -1019,6 +1055,7 @@ header .logo span {
 }
 .pacotes-container .pacote .inputs input::placeholder {
     font-size: 1.5rem;
+    color: var(--cor-texto-terciario);
 }
 .pacotes-container .pacote .buttom {
     display: flex;
@@ -1027,7 +1064,7 @@ header .logo span {
     width: 70%;
     margin: 0 auto;
     padding: 1.2rem 2rem;
-    background-color: #0c3756;
+    background-color: var(--cor-background-primario);
 }
 .pacotes-container .pacote .buttom a {
     font-size: 1.5rem;
@@ -1035,7 +1072,7 @@ header .logo span {
     font-family: "Roboto Condensed", sans-serif;
     text-transform: uppercase;
     letter-spacing: .8px;
-    color: #fff;
+    color: var(--cor-texto-terciario);
 }
 .pacotes-container .pacote .image {
     width: 100%;
@@ -1053,7 +1090,6 @@ header .logo span {
         align-items: center;
         justify-content: center;
         gap: 8rem;
-        
         margin-top: 6rem;
     }
     .pacotes-container .pacote .infos .title {
@@ -1093,19 +1129,13 @@ header .logo span {
 /* -------------- PACOTES STYLES END --------------- */
 
 /* -------------- REGULAMENTOS STYLES STARTS --------------- */
-.image-top-regulamentos img {
-    width: 100%;
-    max-height: 50vh;
-    object-fit: cover;
-}
 .regulations-container .regulation {
     margin-bottom: 2rem;
     padding: .6rem;
 }
 .regulations-container .regulation h3 {
-    font-family: "Raleway", sans-serif;
     font-size: 2rem;
-    color: #0c3756;
+    color: var(--cor-texto-primaria);
     padding-left: 2rem;
     margin-bottom: 1rem;
 }
@@ -1114,7 +1144,6 @@ header .logo span {
 }
 .regulations-container .regulation p,
 .regulations-container .regulation ul li {
-    font-family: "Raleway", sans-serif;
     font-size: 1.6rem;
 }
 @media screen and (min-width: 950px) {
@@ -1131,16 +1160,9 @@ header .logo span {
         margin-bottom: 2rem;
     }
 }
-
-/* -------------- FOOTER STYLES END --------------- */
+/* -------------- REGULAMENTOS STYLES END --------------- */
 
 /* -------------- CONTATO STYLES STARTS --------------- */
-/* Estilo para imagem do top */
-.image-top-contato img {
-    width: 100%;
-    max-height: 50vh;
-    object-fit: cover;
-}
 .contact-container {
     padding: 2rem 0 6rem 0;
 }
@@ -1161,33 +1183,33 @@ header .logo span {
 }
 .contact-container .form .form-infos input,
 .contact-container .form .form-infos select  {
-    background-color: #b7d9e2;
+    background-color: var(--cor-background-secundario);
+    color: var(--cor-texto-terciario);
     width: 90%;
     height: 4rem;
-    color: #0c3756;
     border-radius: 0;
     padding-left: 1.5rem;
-    font-family: "Rubik", sans-serif;
+    font-family: var(--font-input);
     font-weight: 600;
     font-size: 1.4rem;
 }
 .contact-container .form .form-infos input::placeholder {
-    font-family: "Rubik", sans-serif;
+    font-family: var(--font-input);
     font-weight: 600;
     font-size: 1.4rem;
-    color: #0c3756;
+    color: var(--cor-texto-terciario);
 }
 .contact-container .form .form-infos select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    font-family: "Rubik", sans-serif;
+    font-family: var(--font-input);
     font-weight: 600;
     font-size: 1.4rem;
-    color: #0c3756;
+    color: var(--cor-texto-terciario);
     padding: 0 1.4rem;
     padding-right: 30px;
-    background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2012%2012%22%3E%3Cpath%20d%3D%22M6%208l4-4H2z%22%20fill%3D%22%230c3756%22/%3E%3C/svg%3E');    
+    background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2012%2012%22%3E%3Cpath%20d%3D%22M6%208l4-4H2z%22%20fill%3D%22%23f0fcfe%22/%3E%3C/svg%3E');    
     background-repeat: no-repeat;
     background-position: right 10px center; 
     background-size: 1.5rem;
@@ -1203,11 +1225,11 @@ header .logo span {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    font-family: "Rubik", sans-serif;
+    font-family: var(--font-input);
     font-weight: 600;
     font-size: 1.5rem;
-    color: #0c3756;
-    background-color: #b7d9e3;
+    color: var(--cor-texto-terciario);
+    background-color: var(--cor-background-secundario);
     width: 90%;
     border-radius: 0;
     margin-top: 2rem;
@@ -1217,10 +1239,10 @@ header .logo span {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    font-family: "Rubik", sans-serif;
+    font-family: var(--font-input);
     font-weight: 600;
     font-size: 1.5rem;
-    color: #0c3756;
+    color: var(--cor-texto-terciario);
 }
 .contact-container .form .buttom {
     margin-top: 2rem;
@@ -1230,12 +1252,12 @@ header .logo span {
     justify-content: center;
 }
 .contact-container .form .buttom a {
+    background-color: var(--cor-background-primario);
+    color: var(--cor-texto-terciario);
     width: 90%;
-    font-family: "Rubik", sans-serif;
+    font-family: var(--font-botoes);
     font-weight: 600;
     font-size: 1.8rem;
-    background-color: #0c3756;
-    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1288,7 +1310,7 @@ header .logo span {
 
 /* -------------- FOOTER STYLES STARTS --------------- */
 .footer-section .copyright {
-    background-color: #0c3756;
+    background-color: var(--cor-background-primario);
     padding: 5rem 0;
 }
 .footer-section .copyright .logo {
@@ -1302,10 +1324,9 @@ header .logo span {
     margin-bottom: 3rem;
 } 
 .footer-section .copyright .logo span {
-    color: #fff;
+    color: var(--cor-texto-terciario);
     font-size: 1.5rem;
     font-weight: 600;
-    font-family: "Raleway", sans-serif;
 }
 @media screen and (min-width: 950px)  {
     .footer-section .copyright .logo span {
