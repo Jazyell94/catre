@@ -74,6 +74,34 @@ $(document).ready(function () {
 });
 
 
+// MOVE A SELEÇÃO DE IDIOMA PARA DENTRO DO NAV
+document.addEventListener("DOMContentLoaded", () => {
+  const languageSelector = document.querySelector(".language-selector");
+  const navbar = document.querySelector(".navbar");
+  const header = document.querySelector(".header");
+
+  const moveLanguageSelector = () => {
+    if (window.innerWidth <= 768) {
+      // Move para dentro do nav
+      if (!navbar.contains(languageSelector)) {
+        navbar.appendChild(languageSelector);
+      }
+    } else {
+      // Move de volta para o header
+      if (!header.contains(languageSelector)) {
+        header.appendChild(languageSelector);
+      }
+    }
+  };
+
+  // Verificar ao carregar a página
+  moveLanguageSelector();
+
+  // Verificar quando redimensionar a tela
+  window.addEventListener("resize", moveLanguageSelector);
+});
+
+
 // MUDA COR DO HEADER
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.getElementById("header");
@@ -129,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (language === "br") {
       return Promise.resolve({}); // Para o idioma 'br', não precisa carregar arquivo JSON
     }
-    return fetch(`./assets/traducoes/${language}.json`)
+    return fetch(`../assets/traducoes/${language}.json`)
       .then((response) => response.json())
       .catch((error) => {
         console.error("Erro ao carregar o arquivo de traduções:", error);

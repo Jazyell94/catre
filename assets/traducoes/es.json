@@ -1,3 +1,34 @@
 {
-    "about": "Sobre el CATRE"
+    "header-li1": "Inicio",
+    "header-li2": "Acerca de",
+    "header-li3": "Alojamientos",
+    "header-li4": "Restaurante",
+    "header-li5": "Paquetes",
+    "header-li6": "Reglamentos",
+    "header-li7": "Contacto",
+
+    "home-about": "Sobre CATRE",
+    "home-about-p1": "CATRE Purunã (Centro Adventista de Capacitación y Recreación) es un espacio dedicado al crecimiento espiritual, la capacitación y la recreación, ubicado en medio de la exuberante naturaleza de la región de São Luiz do Purunã, en el estado de Paraná. Administrado por la Iglesia Adventista del Séptimo Día, el lugar fue cuidadosamente planeado para ofrecer una experiencia única de conexión con Dios, descanso y aprendizaje.",
+    "home-about-p2": "Con una infraestructura amplia y acogedora, CATRE Purunã ofrece espacios para eventos, retiros espirituales, capacitaciones, campamentos y reuniones. Su estructura incluye auditorios bien equipados, alojamientos confortables, áreas de ocio y un entorno natural que fomenta momentos de reflexión y contemplación.",
+    "home-about-span1": "Desayuno",
+    "home-about-apan2": "Wi-Fi",
+    "home-about-span3": "Estacionamiento",
+
+    "home-accommodations": "Alojamientos",
+    "home-accommodations-p1": "CATRE Purunã cuenta con varios apartamentos distribuidos en cinco categorías: Bloque A, Bloque B, Bloque C, Bloque D y Bloque E. Cada bloque está diseñado para satisfacer diferentes perfiles de huéspedes, ofreciendo opciones variadas que combinan comodidad y funcionalidad.",
+    "home-accommodations-p2": "Cada unidad dispone de camas cómodas, baños privados y duchas calientes, proporcionando una experiencia agradable y práctica. La estructura también cuenta con ventilación natural e iluminación acogedora, garantizando un ambiente cálido para todos los visitantes.",
+    "home-accommodations-buttom": "Ver más detalles",
+
+    "home-video-description-h3": "Conoce CATRE Purunã",
+    "home-video-description-p": "Referente como centro de capacitación en la ciudad de São Luiz do Purunã y la región.",
+
+    "home-wave-h3": "Haz tu reserva",
+    "home-wave-p": "Ya sea para disfrutar momentos de descanso o realizar un evento corporativo único e inolvidable, CATRE Purunã ofrece el ambiente ideal, combinando confort, una estructura de calidad y la belleza de un entorno encantador.",
+    "home-wave-buttom": "¡Contáctanos!",
+
+    "home-address": "Dirección",
+    "home-contact": "Contacto",
+    "home-socials": "Redes sociales",
+
+    "footer": "Todos los derechos reservados, 2024."
 }

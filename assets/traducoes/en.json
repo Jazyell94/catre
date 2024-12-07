@@ -1,4 +1,12 @@
 {
+    "header-li1": "Home",
+    "header-li2": "About",
+    "header-li3": "Accommodations",
+    "header-li4": "Restaurant",
+    "header-li5": "Packages",
+    "header-li6": "Regulations",
+    "header-li7": "Contact",
+
     "home-about": "About CATRE",
     "home-about-p1": "CATRE Purunã (Adventist Training and Recreation Center) is a space dedicated to spiritual growth, training and recreation, located amidst the lush nature of the São Luiz do Purunã region, in the state of Paraná. Managed by the Seventh-day Adventist Church, the place was carefully planned to provide a unique experience of connection with God, rest and learning.",
     "home-about-p2": "With a spacious and welcoming infrastructure, CATRE Purunã offers spaces for events, spiritual retreats, training, camps and gatherings. Its structure includes well-equipped auditoriums, comfortable accommodations, leisure areas and a natural setting that encourages moments of reflection and contemplation.",
@@ -9,8 +17,18 @@
     "home-accommodations": "Accommodations",
     "home-accommodations-p1": "CATRE Purunã has several apartments distributed in five categories: Block A, Block B, Block C, Block D and Block E. Each block was designed to meet different guest profiles, offering varied options that combine comfort and functionality.",
     "home-accommodations-p2": "Each unit has comfortable beds, private bathrooms and hot showers, providing a pleasant and practical experience. The structure also has natural ventilation and cozy lighting, ensuring a welcoming environment for all visitors.",
-    "home-accommodations-buttom": "See more details"
+    "home-accommodations-buttom": "See more details",
 
+    "home-video-description-h3": "Get to know CATRE Purunã",
+    "home-video-description-p": "Reference as a training center in the city of São Luiz do Purunã and region.",
 
+    "home-wave-h3": "Make your reservation",
+    "home-wave-p": "Whether to enjoy moments of rest or promote a unique and unforgettable corporate event, CATRE Purunã offers the ideal environment, combining comfort, quality structure and the beauty of an enchanting setting.",
+    "home-wave-buttom": "Talk to us!",
 
+    "home-address": "Address",
+    "home-contact": "Contact",
+    "home-socials": "Social media",
+
+    "footer": "All rights reserved, 2024."
 }

@@ -147,18 +147,25 @@ header {
     transition: background-color a.1s ease-out;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
+header .navbar {
+    display: flex;
+    gap: 4rem;
+    
+}
 header .navbar ul {
+    flex-wrap: wrap;
     z-index: 10;
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: center;  
+    justify-content: center;
 }
 header .navbar li {
-    margin-left: 2.5rem;
+    display: inline;
+    margin-right: 2.5rem;
 }
 header .navbar ul li a {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: var(--cor-texto-terciario);
     font-weight: 600;
     letter-spacing: 0.04rem;
@@ -170,15 +177,10 @@ header .navbar ul li a:hover {
     color: var(--cor-texto-primaria);
 }
 
-header .navbar .language-selector {
-
-    display: flex;
-    align-items: center;
-    margin-top: 5rem;
-}
 /* Estilos gerais para o seletor */
 .language-selector {
     display: flex;
+    align-items: center;
     justify-content: center;
     gap: 15px; 
 }
@@ -196,28 +198,10 @@ header .navbar .language-selector {
     padding: 5px;
 }
 
-header .buttom {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 20rem;
-    padding: 1.2rem 2rem;
-    background-color: var(--cor-botoes);
-}
-header .buttom a {
-    font-size: 1.5rem;
-    font-weight: 600;
-    font-family: var(--font-heading);
-    text-transform: uppercase;
-    letter-spacing: .8px;
-    color: var(--cor-texto-terciario);
-}
-
 header .logo {
-    border-radius: 50%;
-    overflow: hidden;
-    width: 5rem;
-    height: 5rem;
+    width: 6rem;
+    height: 6rem;
+    margin-right: 2rem;
 }
 header .logo img {
     width: 100%;
@@ -254,7 +238,9 @@ header .logo span {
     z-index: 98;
 }
 
-@media (max-width: 1240px) {
+
+
+@media (max-width: 1000px) {
     #menu {
         display: block !important;
     }
@@ -266,6 +252,7 @@ header .logo span {
         position: fixed;
         top: 0;
         right: -100rem;
+        display: block;
         width: 70%;
         height: 100%;
         padding-top: 8rem;
@@ -307,8 +294,22 @@ header .logo span {
     header .navbar.nav-toggle {
         right: 0;
     }
-    header .buttom {
-        display: none;
+    
+    header .logo {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    
+    .language-selector {
+        display: none; /* Oculta o selector fora do nav */
+    }
+    .navbar .language-selector {
+        display: flex; /* Mostra o selector dentro do nav */
+        justify-content: center;
+        margin-top: 5rem;
+        gap: 2rem;
     }
 }
 /* --------------- HEADER STYLES END --------------- */
@@ -328,17 +329,18 @@ header .logo span {
     color: var(--cor-background-primario)
 }
 @media screen and (min-width: 950px) {
-    .heading-home h3 {
-        font-size: 5rem;
+    .heading-home {
+        padding-top: 5rem;
     }
+    .heading-home h4 {
+        font-size: 10rem;
+        line-height: 10rem;
+    }
+}
+@media screen and (min-width: 1350px) {
     .heading-home h4 {
         font-size: 15rem;
         line-height: 15rem;
-    }
-    .heading-home h4::before {
-        bottom: 10px;
-        height: 10px;
-        display: none;
     }
 }
 
