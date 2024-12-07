@@ -120,6 +120,83 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+
+
+// BOTÃO DE ESCOLHER A TRADUÇÃO 
+document.addEventListener("DOMContentLoaded", function () {
+  // Função para carregar o arquivo JSON de traduções
+  function loadTranslations(language) {
+    if (language === "br") {
+      return Promise.resolve({}); // Para o idioma 'br', não precisa carregar arquivo JSON
+    }
+    return fetch(`../assets/traducoes/${language}.json`)
+      .then((response) => response.json())
+      .catch((error) => {
+        console.error("Erro ao carregar o arquivo de traduções:", error);
+        return {}; // Caso haja erro, retorna um objeto vazio
+      });
+  }
+
+  // Função para aplicar a tradução
+  function setLanguage(language, translations) {
+    const elementsToTranslate = document.querySelectorAll("[data-translate]");
+    elementsToTranslate.forEach(function (element) {
+      const key = element.getAttribute("data-translate");
+      if (translations[key]) {
+        element.textContent = translations[key];
+      }
+    });
+  }
+
+  // Verificar se há um idioma previamente selecionado no localStorage
+  let selectedLanguage = localStorage.getItem("selectedLanguage");
+
+  // Se não houver um idioma salvo no localStorage, definir o idioma como 'br' (default)
+  if (!selectedLanguage) {
+    selectedLanguage = "br";
+    localStorage.setItem("selectedLanguage", selectedLanguage);
+  }
+
+  // Carregar as traduções e aplicar o idioma selecionado
+  loadTranslations(selectedLanguage).then((translations) => {
+    // Definir o idioma ao carregar a página
+    setLanguage(selectedLanguage, translations);
+
+    // Marcar a bandeira correspondente como 'active'
+    document.querySelectorAll(".language-option").forEach(function (option) {
+      if (option.getAttribute("data-value") === selectedLanguage) {
+        option.classList.add("active");
+      }
+    });
+
+    // Adicionar evento de clique para cada bandeira
+    document.querySelectorAll(".language-option").forEach(function (option) {
+      option.addEventListener("click", function () {
+        // Remover a classe 'active' de todas as opções
+        document.querySelectorAll(".language-option").forEach(function (option) {
+          option.classList.remove("active");
+        });
+
+        // Adicionar a classe 'active' à opção clicada
+        option.classList.add("active");
+
+        // Armazenar a seleção no localStorage
+        const languageValue = option.getAttribute("data-value");
+        localStorage.setItem("selectedLanguage", languageValue);
+
+        // Recarregar a página
+        location.reload(); // Isso vai recarregar a página e aplicar o idioma correto
+      });
+    });
+  });
+});
+
+
+
+  
+
+
+
 // SCROLLREVEAL
 document.addEventListener('DOMContentLoaded', function () {
   const sr = ScrollReveal({
