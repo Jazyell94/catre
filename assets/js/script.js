@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function () {
   sr.reveal('.heading-home', { origin: 'top', delay: 100 });
   sr.reveal('.slider-container', { origin: 'top', interval: 100 });
 
-  sr.reveal('.home-about .image', { origin: 'left', delay: 200 });
+  sr.reveal('.home-about .image', { delay: 200 });
   sr.reveal('.home-about .text h3', { delay: 200 });
   sr.reveal('.home-about .text p', { delay: 300 });
   sr.reveal('.home-about .icons', { delay: 400 });
@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', function () {
   sr.reveal('.home-accommodations .text h3', { delay: 200 });
   sr.reveal('.home-accommodations .text p', { delay: 300 });
   sr.reveal('.home-accommodations .text .buttom', { delay: 400 });
-  sr.reveal('.home-accommodations .slider', { origin: 'rigth', interval: 400 });
+  sr.reveal('.home-accommodations .slider', { interval: 400 });
 
   sr.reveal('.home-video-container .home-video', { delay: 400 });
   sr.reveal('.home-video-container .home-video-description', { delay: 600 });
