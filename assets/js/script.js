@@ -120,78 +120,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-
-// SLIDER DO HOME
-const sliderTrack = document.querySelector(".slider-track");
-const slides = document.querySelectorAll(".slide");
-const prevBtn = document.querySelector(".slider-btn.prev");
-const nextBtn = document.querySelector(".slider-btn.next");
-
-let currentIndex = 0;
-let slidesToShow = 1;
-let autoPlayInterval;
-
-function updateSlidesToShow() {
-  slidesToShow = window.innerWidth >= 768 ? 3 : 1;
-  updateSlider();
-}
-
-function updateSlider() {
-  const slideWidth = slides[0].clientWidth; 
-  sliderTrack.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-}
-
-function goToNextSlide() {
-  if (currentIndex === slides.length - slidesToShow) {
-    currentIndex = 0;
-  } else {
-    currentIndex = Math.min(currentIndex + 1, slides.length - slidesToShow); 
-  }
-  updateSlider();
-}
-
-function goToPrevSlide() {
-  if (currentIndex === 0) {
-    currentIndex = slides.length - slidesToShow;
-  } else {
-    currentIndex = Math.max(currentIndex - 1, 0);
-  }
-  updateSlider();
-}
-
-
-function startAutoplay() {
-  autoPlayInterval = setInterval(() => {
-    goToNextSlide();
-  }, 3000); 
-}
-
-function stopAutoplay() {
-  clearInterval(autoPlayInterval);
-}
-
-nextBtn.addEventListener("click", () => {
-  stopAutoplay(); 
-  goToNextSlide();
-  startAutoplay();
-});
-
-prevBtn.addEventListener("click", () => {
-  stopAutoplay(); 
-  goToPrevSlide();
-  startAutoplay();
-});
-
-const sliderContainer = document.querySelector(".slider-container");
-sliderContainer.addEventListener("mouseenter", stopAutoplay);
-sliderContainer.addEventListener("mouseleave", startAutoplay);
-
-window.addEventListener("resize", updateSlidesToShow);
-
-updateSlidesToShow();
-startAutoplay();
-
-
 // SCROLLREVEAL
 document.addEventListener('DOMContentLoaded', function () {
   const sr = ScrollReveal({
@@ -201,11 +129,10 @@ document.addEventListener('DOMContentLoaded', function () {
     reset: true
   });
 
-
-  sr.reveal('.heading-home', { origin: 'top', delay: 100 });
+  sr.reveal('.heading-home', {distance: '30px', origin: 'top', delay: 100 });
   sr.reveal('.slider-container', { origin: 'top', interval: 100 });
 
-  sr.reveal('.home-about .image', { delay: 200 });
+  sr.reveal('.home-about .image', { distance: '0px', opacity: 0, delay: 800 });
   sr.reveal('.home-about .text h3', { delay: 200 });
   sr.reveal('.home-about .text p', { delay: 300 });
   sr.reveal('.home-about .icons', { delay: 400 });
@@ -213,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function () {
   sr.reveal('.home-accommodations .text h3', { delay: 200 });
   sr.reveal('.home-accommodations .text p', { delay: 300 });
   sr.reveal('.home-accommodations .text .buttom', { delay: 400 });
-  sr.reveal('.home-accommodations .slider', { interval: 400 });
+  sr.reveal('.home-accommodations .slider', { distance: '0px', opacity: 0, delay: 800 });
 
   sr.reveal('.home-video-container .home-video', { delay: 400 });
   sr.reveal('.home-video-container .home-video-description', { delay: 600 });
@@ -222,9 +149,19 @@ document.addEventListener('DOMContentLoaded', function () {
   sr.reveal('.wave-section .content', { delay: 400 });
 
   sr.reveal('.home-informacoes .informacoes .b1', { interval: 200 });
-  sr.reveal('.home-informacoes .informacoes .b2', { interval: 300 });
-  sr.reveal('.home-informacoes .informacoes .b3', { interval: 400 });
+  sr.reveal('.home-informacoes .informacoes .b2', { interval: 400 });
+  sr.reveal('.home-informacoes .informacoes .b3', { interval: 600 });
   sr.reveal('.home-informacoes .maps', { interval: 500 });
-  
 
+
+
+  sr.reveal('.heading h3', { origin: 'top', distance: '30px', delay: 300 });
+  sr.reveal('.heading p', { origin: 'top', distance: '30px', interval: 200 });
+
+  sr.reveal('.accommodations-container .infos h3', { distance: '20px', delay: 200 });
+  sr.reveal('.accommodations-container .infos p', { distance: '20px', delay: 300 });
+  sr.reveal('.accommodations-container .infos .items', { distance: '20px', delay: 400 });
+  sr.reveal('.accommodations-container .infos .buttom', { distance: '20px', delay: 500 });
+
+  sr.reveal('.accommodations-container .slider', { distance: '20px', delay: 200 });
 });
