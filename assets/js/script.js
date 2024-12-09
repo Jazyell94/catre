@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (language === "br") {
       return Promise.resolve({}); // Para o idioma 'br', não precisa carregar arquivo JSON
     }
-    return fetch(`/catre/assets/traducoes/${language}.json`)
+    return fetch(`/catre/blob/main/assets/traducoes/${language}.json`)
       .then((response) => response.json())
       .catch((error) => {
         console.error("Erro ao carregar o arquivo de traduções:", error);
