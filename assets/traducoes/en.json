@@ -30,5 +30,42 @@
     "home-contact": "Contact",
     "home-socials": "Social media",
 
+
+    "accommodations-heading": "Accommodations",
+    "accommodations-heading-p1": "A celebration of comfort and well-being that you and your family deserve in our blocks, designed with everything essential to make your stay peaceful and pleasant. Every detail is carefully thought out to provide a relaxing experience.",
+    "accommodations-heading-p2": "Whether for couples, families or groups of friends, our spaces guarantee the perfect accommodation for any special occasion.",
+
+    "accommodation-buttom": "Book now",
+
+    "accommodation-A-title": "Block A",
+    "accommodation-A-description": "Perfect for accommodating up to 8 people with comfort and functionality. Composed of 3 bunk beds and a sofa bed, it provides a spacious and welcoming environment, perfect for groups or families seeking practicality and well-being during their stay.",
+    "accommodation-A-span1": "Up to 8 people",
+    "accommodation-A-span2": "Sofa bed",
+    "accommodation-A-span3": "Minibar",
+    "accommodation-A-span4": "Heated shower",
+
+    "accommodation-B-title": "Block B",
+    "accommodation-B-description": "It comfortably accommodates up to 2 people, with the option of a double bed or two single beds. The space also has a balcony, perfect for relaxing and enjoying the surroundings.",
+    "accommodation-B-span1": "Up to 2 people",
+    "accommodation-B-span2": "Air conditioner",
+    "accommodation-B-span3": "Minibar",
+    "accommodation-B-span4": "Heated shower",
+
+    "accommodation-C-title": "Block C",
+    "accommodation-C-description": "With capacity for up to 6 people, the space has a private double bedroom, ensuring comfort and privacy. The combined living room and kitchen include a bunk bed and a sofa bed, creating a practical and welcoming environment for your stay.",
+    "accommodation-C-span1": "Up to 6 people",
+    "accommodation-C-span2": "Private room",
+    "accommodation-C-span3": "Sofa bed",
+    "accommodation-C-span4": "Air conditioner",
+    "accommodation-C-span5": "Kitchenette",
+    "accommodation-C-span6": "Heated shower",
+
+    "accommodation-DeE-title": "Block D and E",
+    "accommodation-DeE-description": "With capacity for up to four people, the space offers a bunk bed and two single beds, or the option of a double bed, depending on your preference. It also has a private balcony, providing a pleasant space to relax and enjoy the environment.",
+    "accommodation-DeE-span1": "Up to 4 people",
+    "accommodation-DeE-span2": "Air conditioner",
+    "accommodation-DeE-span3": "Private balcony",
+    "accommodation-DeE-span4": "Heated shower",
+
     "footer": "All rights reserved, 2024."
 }

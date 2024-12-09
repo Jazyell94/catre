@@ -27,18 +27,26 @@
         <div id="overlay" class="overlay"></div>
         <nav class="navbar">
             <ul>
-                <li><a href="../index.html" class="link-menu">Início</a></li>
-                <li><a href="#home-about" class="link-menu">Sobre</a></li>
-                <li><a href="index.html" class="active link-menu">Acomodações</a></li>
-                <li><a href="../restaurante/" class="link-menu">Restaurante</a></li>
-                <li><a href="../pacotes/" class="link-menu">Pacotes</a></li>
-                <li><a href="../regulamentos/" class="link-menu">Regulamentos</a></li>
-                <li><a href="../contato/" class="link-menu">Contato</a></li>
+                <li><a href="../index.html" class="link-menu" data-translate="header-li1">Início</a></li>
+                <li><a href="#home-about" class="link-menu" data-translate="header-li2">Sobre</a></li>
+                <li><a href="index.html" class="active link-menu" data-translate="header-li3">Acomodações</a></li>
+                <li><a href="../restaurante/" class="link-menu" data-translate="header-li4">Restaurante</a></li>
+                <li><a href="../pacotes/" class="link-menu" data-translate="header-li5">Pacotes</a></li>
+                <li><a href="../regulamentos/" class="link-menu" data-translate="header-li6">Regulamentos</a></li>
+                <li><a href="../contato/" class="link-menu" data-translate="header-li7">Contato</a></li>
             </ul>
         </nav>
-        <div class="buttom">
-            <a href="#">Reserve Agora</a>
-        </div>
+        <div class="language-selector">
+            <div class="language-option" data-value="br">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg" alt="Brazilian Portuguese" class="flag-icon">
+            </div>
+            <div class="language-option" data-value="en">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" alt="English" class="flag-icon">
+            </div>
+            <div class="language-option" data-value="es">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg" alt="Spanish" class="flag-icon">
+            </div>
+        </div>  
     </header>
     
     <section class="image-top">
@@ -46,13 +54,13 @@
     </section>
     
     <section class="heading">
-        <h3>Acomodações</h3>
-        <p>
+        <h3 data-translate="accommodations-heading">Acomodações</h3>
+        <p data-translate="accommodations-heading-p1">
             Desfrute do conforto e do bem-estar que você e sua família merecem em nossos blocos, planejados 
             com tudo o que é essencial para tornar sua estadia tranquila e agradável. Cada detalhe é cuidadosamente 
             pensado para proporcionar uma experiência relaxante.
         </p>
-        <p>
+        <p data-translate="accommodations-heading-p2">
             Seja para casais, famílias ou grupos de amigos, nossos espaços garantem a 
             acomodação perfeita para qualquer ocasião especial.
         </p>
@@ -61,20 +69,20 @@
     <section class="accommodations-container">
         <div class="accommodation">
             <div class="infos">
-                <h3 class="title">Bloco A</h3>
-                <p class="description">
+                <h3 class="title" data-translate="accommodation-A-title">Bloco A</h3>
+                <p class="description" data-translate="accommodation-A-description">
                     Perfeito para acomodar até 8 pessoas com conforto e funcionalidade. Composto por 3 beliches e 
                     um sofá-cama, proporciona um ambiente espaçoso e acolhedor, perfeito para grupos ou 
                     famílias que buscam praticidade e bem-estar durante sua estadia.
                 </p>
                 <div class="items">
-                    <span>Até 8 pessoas</span>
-                    <span>Sofá-cama</span>
-                    <span>Frigobar</span>
-                    <span>Chuveiro aquecido</span>
+                    <span data-translate="accommodation-A-span1">Até 8 pessoas</span>
+                    <span data-translate="accommodation-A-span2">Sofá-cama</span>
+                    <span data-translate="accommodation-A-span3">Frigobar</span>
+                    <span data-translate="accommodation-A-span4">Chuveiro aquecido</span>
                 </div>
                 <div class="buttom">
-                    <a href="#" data-bloco="Bloco A" class="reserve-now reserve-btn">Reserve Agora</a>
+                    <a href="#" class="reserve-btn" data-translate="accommodation-buttom">Reserve Agora</a>
                 </div>
             </div>
             <div class="slider">
@@ -94,19 +102,19 @@
 
         <div class="accommodation">
             <div class="infos">
-                <h3 class="title">Bloco B</h3>
-                <p class="description">
+                <h3 class="title" data-translate="accommodation-B-title">Bloco B</h3>
+                <p class="description" data-translate="accommodation-B-description">
                     Acomoda confortavelmente até 2 pessoas, com a opção de uma cama de casal ou duas camas de solteiro. 
                     O espaço ainda conta com uma varanda, perfeita para relaxar e aproveitar o ambiente.
                 </p>
                 <div class="items">
-                    <span>Até 2 pessoas</span>
-                    <span>Ar-condicionado</span>
-                    <span>Frigobar</span>
-                    <span>Chuveiro aquecido</span>
+                    <span data-translate="accommodation-B-span1">Até 2 pessoas</span>
+                    <span data-translate="accommodation-B-span2">Ar-condicionado</span>
+                    <span data-translate="accommodation-B-span3">Frigobar</span>
+                    <span data-translate="accommodation-B-span4">Chuveiro aquecido</span>
                 </div>
                 <div class="buttom">
-                    <a href="reservar.html?bloco=Bloco%20B&id=2" class="reserve-now">Reserve Agora</a>
+                    <a href="#" class="reserve-now" data-translate="accommodation-buttom">Reserve Agora</a>
                 </div>
             </div>
             <div class="slider mudar-ordem">
@@ -129,22 +137,22 @@
 
         <div class="accommodation">
             <div class="infos">
-                <h3 class="title">Bloco C</h3>
-                <p class="description">
+                <h3 class="title" data-translate="accommodation-C-title">Bloco C</h3>
+                <p class="description" data-translate="accommodation-C-description">
                     Com capacidade para até 6 pessoas, o espaço dispõe de um quarto de casal privativo, garantindo 
                     conforto e privacidade. A sala e a cozinha conjugadas incluem uma beliche e um sofá-cama, 
                     criando um ambiente prático e acolhedor para a estadia.
                 </p>
                 <div class="items">
-                    <span>Até 6 pessoas</span>
-                    <span>Quarto privativo</span>
-                    <span>Sofá-cama</span>
-                    <span>Ar-condicionado</span>
-                    <span>Cozinha conjugada</span>
-                    <span>Chuveiro aquecido</span>
+                    <span data-translate="accommodation-C-span1">Até 6 pessoas</span>
+                    <span data-translate="accommodation-C-span2">Quarto privativo</span>
+                    <span data-translate="accommodation-C-span3">Sofá-cama</span>
+                    <span data-translate="accommodation-C-span4">Ar-condicionado</span>
+                    <span data-translate="accommodation-C-span5">Cozinha conjugada</span>
+                    <span data-translate="accommodation-C-span6">Chuveiro aquecido</span>
                 </div>
                 <div class="buttom">
-                    <a href="reservar.html?bloco=Bloco%20C&id=3" class="reserve-now">Reserve Agora</a>
+                    <a href="#" class="reserve-now" data-translate="accommodation-buttom">Reserve Agora</a>
                 </div>
             </div>
             <div class="slider">
@@ -168,20 +176,20 @@
 
         <div class="accommodation">
             <div class="infos">
-                <h3 class="title">Bloco D & E</h3>
-                <p class="description">              
+                <h3 class="title" data-translate="accommodation-DeE-title">Bloco D & E</h3>
+                <p class="description" data-translate="accommodation-DeE-description">              
                     Com capacidade para até quatro pessoas, o ambiente oferece uma beliche e duas camas de solteiro, 
                     ou a opção de uma cama de casal, conforme a preferência. Conta ainda com uma sacada privativa, 
                     proporcionando um espaço agradável para relaxar e desfrutar do ambiente.
                 </p>
                 <div class="items">
-                    <span>Até 4 pessoas</span>
-                    <span>Ar-condicionado</span>
-                    <span>Sacada privativa</span>
-                    <span>Chuveiro aquecido</span>
+                    <span data-translate="accommodation-DeE-span1">Até 4 pessoas</span>
+                    <span data-translate="accommodation-DeE-span2">Ar-condicionado</span>
+                    <span data-translate="accommodation-DeE-span3">Sacada privativa</span>
+                    <span data-translate="accommodation-DeE-span4">Chuveiro aquecido</span>
                 </div>
                 <div class="buttom">
-                    <a href="reservar.html?bloco=Bloco%20DeE&id=4" class="reserve-now">Reserve Agora</a>
+                    <a href="#" class="reserve-now" data-translate="accommodation-buttom">Reserve Agora</a>
                 </div>
             </div>
             <div class="slider mudar-ordem">
@@ -208,7 +216,7 @@
         <div class="copyright">
             <div class="logo">
                 <img src="../assets/images/logo/logo-png.png" alt="logo">
-                <span>&copy; Todos os direitos reservados, 2024.</span>
+                <span>&copy; <span data-translate="footer">Todos os direitos reservados, 2024.</span></span>
             </div>
         </div>
     </section>

@@ -30,5 +30,42 @@
     "home-contact": "Contacto",
     "home-socials": "Redes sociales",
 
+
+    "accommodations-heading": "Alojamientos",
+    "accommodations-heading-p1": "Una celebración del confort y el bienestar que tú y tu familia merecen en nuestros bloques, diseñados con todo lo esencial para hacer su estancia tranquila y agradable. Cada detalle está cuidadosamente pensado para ofrecer una experiencia relajante.",
+    "accommodations-heading-p2": "Ya sea para parejas, familias o grupos de amigos, nuestros espacios garantizan el alojamiento perfecto para cualquier ocasión especial.",
+
+    "accommodation-buttom": "Reservar ahora",
+
+    "accommodation-A-title": "Bloque A",
+    "accommodation-A-description": "Perfecto para alojar hasta 8 personas con comodidad y funcionalidad. Compuesto por 3 literas y un sofá cama, ofrece un ambiente espacioso y acogedor, ideal para grupos o familias que buscan practicidad y bienestar durante su estancia.",
+    "accommodation-A-span1": "Hasta 8 personas",
+    "accommodation-A-span2": "Sofá cama",
+    "accommodation-A-span3": "Minibar",
+    "accommodation-A-span4": "Ducha con agua caliente",
+
+    "accommodation-B-title": "Bloque B",
+    "accommodation-B-description": "Acomoda cómodamente hasta 2 personas, con la opción de una cama doble o dos camas individuales. El espacio también cuenta con un balcón, perfecto para relajarse y disfrutar del entorno.",
+    "accommodation-B-span1": "Hasta 2 personas",
+    "accommodation-B-span2": "Aire acondicionado",
+    "accommodation-B-span3": "Minibar",
+    "accommodation-B-span4": "Ducha con agua caliente",
+
+    "accommodation-C-title": "Bloque C",
+    "accommodation-C-description": "Con capacidad para hasta 6 personas, el espacio cuenta con una habitación doble privada, asegurando comodidad y privacidad. La sala de estar y la cocina combinadas incluyen una litera y un sofá cama, creando un ambiente práctico y acogedor para su estancia.",
+    "accommodation-C-span1": "Hasta 6 personas",
+    "accommodation-C-span2": "Habitación privada",
+    "accommodation-C-span3": "Sofá cama",
+    "accommodation-C-span4": "Aire acondicionado",
+    "accommodation-C-span5": "Kitchenette",
+    "accommodation-C-span6": "Ducha con agua caliente",
+
+    "accommodation-DeE-title": "Bloques D y E",
+    "accommodation-DeE-description": "Con capacidad para hasta cuatro personas, el espacio ofrece una litera y dos camas individuales, o la opción de una cama doble, según su preferencia. También cuenta con un balcón privado, que proporciona un espacio agradable para relajarse y disfrutar del entorno.",
+    "accommodation-DeE-span1": "Hasta 4 personas",
+    "accommodation-DeE-span2": "Aire acondicionado",
+    "accommodation-DeE-span3": "Balcón privado",
+    "accommodation-DeE-span4": "Ducha con agua caliente",
+
     "footer": "Todos los derechos reservados, 2024."
 }
