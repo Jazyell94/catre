@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - CATRE</title>
+    <title>CATRE - Contato</title>
 
     <!-- LINK PARA FONTAWESOME -->
     <script src="https://kit.fontawesome.com/f9145d5310.js" crossorigin="anonymous"></script>
@@ -27,13 +27,13 @@
         <div id="overlay" class="overlay"></div>
         <nav class="navbar">
             <ul>
-                <li><a href="../index.html" class="link-menu">Início</a></li>
-                <li><a href="#home-about" class="link-menu">Sobre</a></li>
-                <li><a href="../acomodacoes/" class="link-menu">Acomodações</a></li>
-                <li><a href="../restaurante/" class="link-menu">Restaurante</a></li>
-                <li><a href="../pacotes/" class="link-menu">Pacotes</a></li>
-                <li><a href="../regulamentos/" class="link-menu">Regulamentos</a></li>
-                <li><a href="index.html" class="active link-menu">Contato</a></li>
+                <li><a href="../index.html" class="link-menu" data-translate="header-li1">Início</a></li>
+                <li><a href="#home-about" class="link-menu" data-translate="header-li2">Sobre</a></li>
+                <li><a href="../acomodacoes/" class="link-menu" data-translate="header-li3">Acomodações</a></li>
+                <li><a href="../restaurante/" class="link-menu" data-translate="header-li4">Restaurante</a></li>
+                <li><a href="../pacotes/" class="link-menu" data-translate="header-li5">Pacotes</a></li>
+                <li><a href="../regulamentos/" class="link-menu" data-translate="header-li6">Regulamentos</a></li>
+                <li><a href="index.html" class="active link-menu" data-translate="header-li7">Contato</a></li>
             </ul>
         </nav>
         <div class="language-selector">
@@ -54,14 +54,22 @@
     </section>
 
     <section class="heading">
-        <h3>Contato</h3>
-        <p>
+        <h3 data-translate="contact-heading">Contato</h3>
+        <p data-translate="contact-heading-p1">
             Se tiver dúvidas é só falar com a gente em algum dos canais de atendimento abaixo:
         </p>
         <p>
-            Telefone: <span>(41) 99792-0156</span>, de segunda a sexta das 8h às 18h.
-            WhatsApp: <span>(41) 99792-0156</span> ou <span><a href="https://wa.me/5541997920156">Clique aqui</a></span> para iniciar a conversa, todos os dias das 8h às 18h.
-            E-mail: catre.puruna@adventistas.org
+            <span  data-translate="contact-heading-p2a">Telefone: </span>
+            <span>(81) 98494-6411</span>
+            <span  data-translate="contact-heading-p2b">ou</span>
+            <span>(81) 3352-9476</span>
+            <span  data-translate="contact-heading-p2c">de segunda a sexta das 8h às 18h.</span>
+            <span>WhatsApp: </span>
+            <span>(81) 98494-6411</span>
+            <span  data-translate="contact-heading-p2d">ou</span>
+            <span><a href="https://wa.me/5541997920156"  data-translate="contact-heading-p2e">Clique aqui</a></span>
+            <span  data-translate="contact-heading-p2f">para iniciar uma conversa.</span>
+            <span>E-mail: reservas@pousadaiande.com.br</span>
         </p>
     </section>
 
@@ -69,25 +77,26 @@
         <div class="form">
             <div class="form-infos">
                 <div class="coluna">
-                    <input type="text" name="nome" id="nome" placeholder="Nome">
-                    <input type="text" name="sobrenome" id="sobrenome" placeholder="Sobrenome">
+                    <input type="text" name="nome" id="nome" placeholder="Nome" data-translate="contact-input1">
+                    <input type="text" name="sobrenome" id="sobrenome" placeholder="Sobrenome" data-translate="contact-input2"> 
                     <input type="text" name="email" id="email" placeholder="Email">
                 </div>
                 <div class="coluna">
-                    <input type="text" name="telefone" id="telefone" placeholder="Telefone">
+                    <input type="text" name="telefone" id="telefone" placeholder="Telefone" data-translate="contact-input3">
                     <select name="select" id="select">
-                        <option value="0">Escolha o assunto</option>
-                        <option value="1">Ainda não tenho reserva</option>
-                        <option value="2">Já fiz minha reserva</option>
+                        <option value="0" data-translate="contact-option1">Escolha o assunto</option>
+                        <option value="1" data-translate="contact-option2">Ainda não tenho reserva</option>
+                        <option value="2" data-translate="contact-option3">Já fiz minha reserva</option>
+                        <option value="3" data-translate="contact-option4">Agencia de viagem</option>
                     </select>
-                    <input type="text" name="reserva" id="reserva" placeholder="Numero da reserva">
+                    <input type="text" name="reserva" id="reserva" placeholder="Numero da reserva" data-translate="contact-input4">
                 </div>
             </div>
             <div class="form-mesage">
-                <textarea rows="10" placeholder="Mensagem"></textarea>
+                <textarea rows="10" placeholder="Mensagem" data-translate="contact-input5"></textarea>
             </div>
             <div class="buttom">
-                <a href="#">ENVIAR</a>
+                <a href="#" data-translate="contact-buttom">ENVIAR</a>
             </div>
         </div>
     </section>
@@ -102,10 +111,15 @@
         </div>
     </section>
 
-    <!-- LINK PARA O JS LOCAL -->
-    <script src="../assets/js/script.js"></script>
-    
+
+    <!-- LINK PARA O SCROLLREVEAL -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
     <!-- LINK PARA O JS DO SWIPER -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+    <!-- LINK PARA JS LOCAL -->
+    <script src="../assets/js/script.js"></script>
+    
 </body>
 </html>

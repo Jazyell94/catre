@@ -93,19 +93,25 @@ body {
     text-align: center;
     color: var(--cor-texto-primaria);
 }
-.heading p {
+.heading p,
+.heading div {
     font-size: 1.4rem;
     text-align: center;
     padding-top: 2rem;
     line-height: 2rem;
+}
+.heading div {
+    border: 1px solid red;
+    padding: 0;
 
 }
-.heading p span,
-.heading p span a {
+.heading div span,
+.heading div span a {
     color: var(--cor-texto-primaria);
     font-weight: 600;
     text-decoration: none;
     -kit-tap-highlight-color: transparent;
+    border: 1px solid red;
 }
 @media screen and (min-width: 768px) {
     .heading h3 {
@@ -924,7 +930,7 @@ header .logo span {
     flex-direction: column;
     padding-top: 2rem;
     flex-wrap: wrap; 
-    max-height: calc(4 * 1.5em + 4 * 8px);
+    max-height: calc(5 * 1.5em + 5 * 8px);
 }
 .accommodations-container .accommodation .items span {
     display: flex;
@@ -1035,13 +1041,17 @@ header .logo span {
     height: 100%;
     object-fit: cover;
 }
+
+
 @media screen and (min-width: 950px) {
     .restaurante-container .my-gallery {
+        width: 80%;
+        margin: 0 auto;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
     .restaurante-container .my-gallery .image {
-        height: 50rem;
+        height: 40rem;  
     }
 }
 /* -------------- RESTAURANTE STYLES END --------------- */
@@ -1113,14 +1123,19 @@ header .logo span {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 8rem;
+        gap: 4rem;
+        width: 80%;
         margin-top: 6rem;
+    }
+    .pacotes-container .pacote .infos {
+        flex: 0.8;
     }
     .pacotes-container .pacote .infos .title {
         font-size: 4rem;
         text-align: start;
         margin-bottom: 2rem;
     }
+    
     .pacotes-container .pacote .infos span {
         text-align: start;
         font-size: 2rem;
@@ -1148,6 +1163,7 @@ header .logo span {
         width: 70rem;
         height: 40rem;
         margin: 0;
+        flex: 1;
     }
 }
 /* -------------- PACOTES STYLES END --------------- */

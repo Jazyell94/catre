@@ -7,6 +7,8 @@
     "header-li6": "Regulations",
     "header-li7": "Contact",
 
+
+
     "home-about": "About CATRE",
     "home-about-p1": "CATRE Purunã (Adventist Training and Recreation Center) is a space dedicated to spiritual growth, training and recreation, located amidst the lush nature of the São Luiz do Purunã region, in the state of Paraná. Managed by the Seventh-day Adventist Church, the place was carefully planned to provide a unique experience of connection with God, rest and learning.",
     "home-about-p2": "With a spacious and welcoming infrastructure, CATRE Purunã offers spaces for events, spiritual retreats, training, camps and gatherings. Its structure includes well-equipped auditoriums, comfortable accommodations, leisure areas and a natural setting that encourages moments of reflection and contemplation.",
@@ -29,6 +31,7 @@
     "home-address": "Address",
     "home-contact": "Contact",
     "home-socials": "Social media",
+
 
 
     "accommodations-heading": "Accommodations",
@@ -66,6 +69,76 @@
     "accommodation-DeE-span2": "Air conditioner",
     "accommodation-DeE-span3": "Private balcony",
     "accommodation-DeE-span4": "Heated shower",
+
+
+
+    "restaurant-heading": "Restaurant",
+    "restaurant-heading-p1": "Our restaurant offers a spacious and comfortable space, with capacity to serve up to 240 people in a fully air-conditioned environment. Meals are carefully prepared in our own facilities, always ensuring fresh and tasty food. We offer a varied buffet with ovo-lacto-vegetarian options, natural juices and delicious desserts. On special occasions and commemorative dates, we promote exclusive dinners and themed parties that make each moment unique and unforgettable.",
+
+
+
+    "packages-heading": "Packages and offers",
+    "packages-heading-p1": "Discover our special packages designed so that you and your family can experience unforgettable moments at CATRE Purunã. In addition to our infrastructure and the natural beauty that surrounds our space, you will also enjoy a program that features weekly speakers who deliver uplifting messages for the body, mind and spirit. In this section, you will learn about our special packages designed so that you and your family can enjoy days of rest and leisure.",
+    "packages-input-placeholder1": "Nº Adults",
+    "packages-input-placeholder2": "Nº Children",
+    "packages-buttom": "To reserve",
+
+
+    "regulation-heading": "Internal regulations",
+    "regulation-1-title": "1. Smoking Prohibited",
+    "regulation-1-li1": "Smoking is strictly prohibited inside the apartment or in any internal area of ​​CATRE.",
+
+    "regulation-2-title": "2. Not Allowed",
+    "regulation-2-li1": "Use of weapons or fireworks.",
+    "regulation-2-li2": "Consumption of alcoholic beverages or drugs.",
+    "regulation-2-li3": "Place clothes or towels on windows and balconies.",
+    "regulation-2-li4": "Entering the restaurant or auditorium without a shirt, barefoot or wet.",
+    "regulation-2-li5": "Remove furniture and fixtures from any accommodation.",
+    "regulation-2-li6": "Wear studded cleats on the football field.",
+    "regulation-2-li7": "Take towels from CATRE to the pool or beach.",
+
+    "regulation-3-title": "3. Pool Rules",
+    "regulation-3-li1a": "Supervision of children:",
+    "regulation-3-li1b": "Children under 10 years old may only enter the pool accompanied by their parents or guardians.",
+    "regulation-3-li2a": "Swimsuits:",
+    "regulation-3-li2b": "Women:",
+    "regulation-3-li2c": "Discreet bikinis are only permitted in the pool area.",
+    "regulation-3-li2d": "Men:",
+    "regulation-3-li2e": "The use of swimming trunks is only permitted in the pool area.",
+    "regulation-3-li3a": "Recommendations:",
+    "regulation-3-li3b": "Do not take food into the pool.",
+    "regulation-3-li3c": "Avoid going into the water immediately after meals.",
+
+    "regulation-4-title": "4. Rules for Saturdays",
+    "regulation-4-li2": "There will be no sports activities.",
+    "regulation-4-li3": "No CATRE sector will be in operation during this period.",
+
+
+
+    "contact-heading": "Contact",
+    "contact-heading-p1": "If you have any questions, just talk to us through one of the service channels below:",
+    "contact-heading-p2a": "Phone: ",
+    "contact-heading-p2b": "or",
+    "contact-heading-p2c": "Monday to Friday from 8am to 6pm.",
+    "contact-heading-p2d": "or",
+    "contact-heading-p2e": "Click here",
+    "contact-heading-p2f": "to start a conversation.",
+
+    "contact-input1": "Name",
+    "contact-input2": "Surname",
+    "contact-input3": "Phone",
+
+    "contact-option1": "Choose the subject",
+    "contact-option2": "I don't have a reservation yet",
+    "contact-option3": "I have already made my reservation",
+    "contact-option4": "Travel agency",
+
+    "contact-input4": "Reservation number",
+    "contact-input5": "Message",
+
+    "contact-buttom": "TO SEND",
+
+    
 
     "footer": "All rights reserved, 2024."
 }

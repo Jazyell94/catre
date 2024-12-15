@@ -7,6 +7,8 @@
     "header-li6": "Reglamentos",
     "header-li7": "Contacto",
 
+
+
     "home-about": "Sobre CATRE",
     "home-about-p1": "CATRE Purunã (Centro Adventista de Capacitación y Recreación) es un espacio dedicado al crecimiento espiritual, la capacitación y la recreación, ubicado en medio de la exuberante naturaleza de la región de São Luiz do Purunã, en el estado de Paraná. Administrado por la Iglesia Adventista del Séptimo Día, el lugar fue cuidadosamente planeado para ofrecer una experiencia única de conexión con Dios, descanso y aprendizaje.",
     "home-about-p2": "Con una infraestructura amplia y acogedora, CATRE Purunã ofrece espacios para eventos, retiros espirituales, capacitaciones, campamentos y reuniones. Su estructura incluye auditorios bien equipados, alojamientos confortables, áreas de ocio y un entorno natural que fomenta momentos de reflexión y contemplación.",
@@ -31,6 +33,7 @@
     "home-socials": "Redes sociales",
 
 
+    
     "accommodations-heading": "Alojamientos",
     "accommodations-heading-p1": "Una celebración del confort y el bienestar que tú y tu familia merecen en nuestros bloques, diseñados con todo lo esencial para hacer su estancia tranquila y agradable. Cada detalle está cuidadosamente pensado para ofrecer una experiencia relajante.",
     "accommodations-heading-p2": "Ya sea para parejas, familias o grupos de amigos, nuestros espacios garantizan el alojamiento perfecto para cualquier ocasión especial.",
@@ -66,6 +69,77 @@
     "accommodation-DeE-span2": "Aire acondicionado",
     "accommodation-DeE-span3": "Balcón privado",
     "accommodation-DeE-span4": "Ducha con agua caliente",
+
+
+
+    "restaurant-heading": "Restaurante",
+    "restaurant-heading-p1": "Nuestro restaurante ofrece un espacio amplio y cómodo, con capacidad para atender hasta 240 personas en un ambiente totalmente climatizado. Las comidas son cuidadosamente preparadas en nuestras propias instalaciones, garantizando siempre alimentos frescos y sabrosos. Ofrecemos un variado buffet con opciones ovolactovegetarianas, jugos naturales y deliciosos postres. En ocasiones especiales y fechas conmemorativas, promovemos cenas exclusivas y fiestas temáticas que hacen de cada momento algo único e inolvidable.",
+    
+
+
+    "packages-heading": "Paquetes y ofertas",
+    "packages-heading-p1": "Descubre nuestros paquetes especiales diseñados para que tú y tu familia vivan momentos inolvidables en CATRE Purunã. Además de nuestra infraestructura y la belleza natural que rodea nuestro espacio, también disfrutarás de una programación que incluye oradores semanales que entregan mensajes edificantes para el cuerpo, la mente y el espíritu. En esta sección, conocerás nuestros paquetes especiales diseñados para que tú y tu familia disfruten días de descanso y ocio.",
+    "packages-input-placeholder1": "Nº Adultos",
+    "packages-input-placeholder2": "Nº Niños",
+    "packages-buttom": "Reservar",
+
+
+
+    "regulation-heading": "Reglamento interno",
+    "regulation-1-title": "1. Prohibido fumar",
+    "regulation-1-li1": "Está estrictamente prohibido fumar dentro del apartamento o en cualquier área interna de CATRE.",
+
+    "regulation-2-title": "2. No permitido",
+    "regulation-2-li1": "Uso de armas o fuegos artificiales.",
+    "regulation-2-li2": "Consumo de bebidas alcohólicas o drogas.",
+    "regulation-2-li3": "Colocar ropa o toallas en las ventanas y balcones.",
+    "regulation-2-li4": "Entrar al restaurante o auditorio sin camiseta, descalzo o mojado.",
+    "regulation-2-li5": "Mover muebles o accesorios de cualquier alojamiento.",
+    "regulation-2-li6": "Usar zapatos con tachones en el campo de fútbol.",
+    "regulation-2-li7": "Llevar toallas de CATRE a la piscina o a la playa.",
+
+    "regulation-3-title": "3. Reglas para la piscina",
+    "regulation-3-li1a": "Supervisión de niños:",
+    "regulation-3-li1b": "Los niños menores de 10 años solo pueden entrar a la piscina acompañados de sus padres o tutores.",
+    "regulation-3-li2a": "Trajes de baño:",
+    "regulation-3-li2b": "Mujeres:",
+    "regulation-3-li2c": "Solo se permiten bikinis discretos en el área de la piscina.",
+    "regulation-3-li2d": "Hombres:",
+    "regulation-3-li2e": "El uso de trajes de baño está permitido solo en el área de la piscina.",
+    "regulation-3-li3a": "Recomendaciones:",
+    "regulation-3-li3b": "No lleve comida a la piscina.",
+    "regulation-3-li3c": "Evite entrar al agua inmediatamente después de las comidas.",
+
+    "regulation-4-title": "4. Reglas para los sábados",
+    "regulation-4-li2": "No habrá actividades deportivas.",
+    "regulation-4-li3": "Ningún sector de CATRE estará en funcionamiento durante este período.",
+
+
+
+    "contact-heading": "Contacto",
+    "contact-heading-p1": "Si tiene alguna duda, hable con nosotros a través de uno de los canales de atención a continuación:",
+    "contact-heading-p2a": "Teléfono: ",
+    "contact-heading-p2b": "o",
+    "contact-heading-p2c": "De lunes a viernes de 8:00 a 18:00.",
+    "contact-heading-p2d": "o",
+    "contact-heading-p2e": "Haga clic aquí",
+    "contact-heading-p2f": "para iniciar una conversación.",
+
+    "contact-input1": "Nombre",
+    "contact-input2": "Apellido",
+    "contact-input3": "Teléfono",
+
+    "contact-option1": "Elija el asunto",
+    "contact-option2": "Todavía no tengo una reserva",
+    "contact-option3": "Ya hice mi reserva",
+    "contact-option4": "Agencia de viajes",
+
+    "contact-input4": "Número de reserva",
+    "contact-input5": "Mensaje",
+
+    "contact-buttom": "ENVIAR",
+      
+
 
     "footer": "Todos los derechos reservados, 2024."
 }

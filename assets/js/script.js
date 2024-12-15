@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (language === "br") {
       return Promise.resolve({}); // Para o idioma 'br', não precisa carregar arquivo JSON
     }
-    return fetch(`https://jazyell94.github.io/catre/assets/traducoes/${language}.json`)
+    return fetch(`/frontend/assets/traducoes/${language}.json`)
       .then((response) => response.json())
       .catch((error) => {
         console.error("Erro ao carregar o arquivo de traduções:", error);
@@ -172,6 +172,14 @@ document.addEventListener("DOMContentLoaded", function () {
       const key = element.getAttribute("data-translate");
       if (translations[key]) {
         element.textContent = translations[key];
+      }
+    });
+
+    const inputsToTranslate = document.querySelectorAll("input[data-translate], textarea[data-translate], select[data-translate]");
+    inputsToTranslate.forEach(function (input) {
+      const key = input.getAttribute("data-translate");
+      if (translations[key]) {
+        input.setAttribute("placeholder", translations[key]); // Traduz o placeholder
       }
     });
   }
@@ -259,7 +267,6 @@ document.addEventListener('DOMContentLoaded', function () {
   sr.reveal('.home-informacoes .maps', { interval: 500 });
 
 
-
   sr.reveal('.heading h3', { origin: 'top', distance: '30px', delay: 300 });
   sr.reveal('.heading p', { origin: 'top', distance: '30px', interval: 200 });
 
@@ -269,4 +276,15 @@ document.addEventListener('DOMContentLoaded', function () {
   sr.reveal('.accommodations-container .infos .buttom', { distance: '20px', delay: 500 });
 
   sr.reveal('.accommodations-container .slider', { distance: '20px', delay: 200 });
+
+  sr.reveal('.restaurante-container .my-gallery a img', { delay: 200 });
+
+  sr.reveal('.regulations-container .regulation h3', { distance: '10px', delay: 200 });
+  sr.reveal('.regulations-container .regulation ul', { distance: '10px', delay: 300 });
+  sr.reveal('.regulations-container .regulation ul li', { distance: '10px', delay: 400 });
+
+  sr.reveal('.contact-container .form input', { distance: '10px', delay: 400 });
+  sr.reveal('.contact-container .form select', { distance: '10px', delay: 400 });
+  sr.reveal('.contact-container .form textarea', { distance: '10px', delay: 400 });
+  sr.reveal('.contact-container .form .buttom', { distance: '10px', delay: 400 });
 });

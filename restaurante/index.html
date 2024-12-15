@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pacotes - CATRE</title>
+    <title>CATRE - Restaurante</title>
 
     <!-- LINK PARA FONTAWESOME -->
     <script src="https://kit.fontawesome.com/f9145d5310.js" crossorigin="anonymous"></script>
@@ -36,13 +36,13 @@
         <div id="overlay" class="overlay"></div>
         <nav class="navbar">
             <ul>
-                <li><a href="../index.html" class="link-menu">Início</a></li>
-                <li><a href="#home-about" class="link-menu">Sobre</a></li>
-                <li><a href="../acomodacoes/" class="link-menu">Acomodações</a></li>
-                <li><a href="index.html" class="active link-menu">Restaurante</a></li>
-                <li><a href="../pacotes/" class="link-menu">Pacotes</a></li>
-                <li><a href="../regulamentos/" class="link-menu">Regulamentos</a></li>
-                <li><a href="../contato/" class="link-menu">Contato</a></li>
+                <li><a href="../index.html" class="link-menu" data-translate="header-li1">Início</a></li>
+                <li><a href="#home-about" class="link-menu" data-translate="header-li2">Sobre</a></li>
+                <li><a href="../acomodacoes/" class="link-menu" data-translate="header-li3">Acomodações</a></li>
+                <li><a href="index.html" class="active link-menu" data-translate="header-li4">Restaurante</a></li>
+                <li><a href="../pacotes/" class="link-menu" data-translate="header-li5">Pacotes</a></li>
+                <li><a href="../regulamentos/" class="link-menu" data-translate="header-li6">Regulamentos</a></li>
+                <li><a href="../contato/" class="link-menu" data-translate="header-li7">Contato</a></li>
             </ul>
         </nav>
         <div class="language-selector">
@@ -63,8 +63,8 @@
     </section>
 
     <section class="heading">
-        <h3>Restaurante</h3>
-        <p>
+        <h3 data-translate="restaurant-heading">Restaurante</h3>
+        <p data-translate="restaurant-heading-p1"> 
             Nosso restaurante oferece um espaço amplo e confortável, com capacidade para atender até 240 pessoas em 
             um ambiente totalmente climatizado. As refeições são cuidadosamente preparadas em nossas próprias 
             instalações, garantindo sempre alimentos frescos e saborosos. Oferecemos um buffet variado com opções 
@@ -78,23 +78,22 @@
     
     <section class="restaurante-container">
         <div class="my-gallery">
-            <a href="../assets/images/restaurante/frente.jpeg" data-pswp-width="900" data-pswp-height="1100" class="image">
+            <a href="../assets/images/restaurante/frente.jpeg" class="image">
                 <img src="../assets/images/restaurante/frente.jpeg" alt="Imagem 1">
             </a>
-            <a href="../assets/images/restaurante/rest1.jpeg" data-pswp-width="900" data-pswp-height="1100" class="image">
+            <a href="../assets/images/restaurante/rest1.jpeg" class="image">
                 <img src="../assets/images/restaurante/rest1.jpeg" alt="Imagem 1">
             </a>
-            <a href="../assets/images/restaurante/rest2.jpeg" data-pswp-width="900" data-pswp-height="1100" class="image">
+            <a href="../assets/images/restaurante/rest2.jpeg" class="image">
                 <img src="../assets/images/restaurante/rest2.jpeg" alt="Imagem 2">
             </a>
-            <a href="../assets/images/restaurante/rest3.jpeg" data-pswp-width="1200" data-pswp-height="900" class="image">
+            <a href="../assets/images/restaurante/rest3.jpeg" class="image">
                 <img src="../assets/images/restaurante/rest3.jpeg" alt="Imagem 3">
             </a>
-            <a href="../assets/images/restaurante/rest4.jpeg" data-pswp-width="1200" data-pswp-height="900" class="image"> 
+            <a href="../assets/images/restaurante/rest4.jpeg" class="image"> 
                 <img src="../assets/images/restaurante/rest4.jpeg" alt="Imagem 3">
             </a>
           </div>
-          
     </section>
 
 
@@ -109,25 +108,64 @@
         </div>
     </section>
 
-    <!-- LINK PARA JS LOCAL -->
-    <script src="../assets/js/script.js"></script>
-
-    <!-- LINK PARA O JS DO SWIPER -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
+    
    
     <script type="module">
         import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.min.js';
-      
-        const lightbox = new PhotoSwipeLightbox({
-          gallery: '.my-gallery', // Seletor da galeria
-          children: 'a',          // Seletor para os itens (links)
-          pswpModule: () => import('https://unpkg.com/photoswipe@5/dist/photoswipe.esm.min.js'),
-        });
-      
-        lightbox.init();
+        import PhotoSwipe from 'https://unpkg.com/photoswipe@5/dist/photoswipe.esm.min.js';
+    
+        // Função para inicializar a galeria e corrigir dimensões
+        function initializeGallery() {
+            const gallerySelector = '.my-gallery';
+            const itemsSelector = 'a';
+    
+            try {
+                // Corrigir dimensões ausentes ou incorretas
+                document.querySelectorAll(`${gallerySelector} ${itemsSelector}`).forEach(link => {
+                    const imgSrc = link.getAttribute('href');
+    
+                    if (!link.hasAttribute('data-pswp-width') || !link.hasAttribute('data-pswp-height')) {
+                        const tempImg = new Image();
+                        tempImg.src = imgSrc;
+                        tempImg.onload = () => {
+                            link.setAttribute('data-pswp-width', tempImg.naturalWidth);
+                            link.setAttribute('data-pswp-height', tempImg.naturalHeight);
+                        };
+                    }
+                });
+    
+                // Inicializa o PhotoSwipe
+                const lightbox = new PhotoSwipeLightbox({
+                    gallery: gallerySelector, // Seletor da galeria
+                    children: itemsSelector,  // Itens da galeria
+                    pswpModule: PhotoSwipe,   // Importação do módulo principal
+                    padding: { top: 10, bottom: 10, left: 10, right: 10 }, // Ajusta o espaço ao redor da imagem
+                    
+                    transitionEffect: 'slide',
+                    showHideAnimationType: 'fade', // Animação de entrada/saída
+                });
+    
+                lightbox.init();
+                console.log('Galeria inicializada com sucesso!');
+            } catch (error) {
+                console.error('Erro ao inicializar a galeria:', error);
+            }
+        }
+    
+        // Aguarda o DOM estar pronto antes de inicializar
+        document.addEventListener('DOMContentLoaded', initializeGallery);
     </script>
-      
+    
+    
+    
+    <!-- LINK PARA O SCROLLREVEAL -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- LINK PARA O JS DO SWIPER -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+    <!-- LINK PARA JS LOCAL -->
+    <script src="../assets/js/script.js"></script>
 
 </body>
 </html>
